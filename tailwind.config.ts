@@ -24,6 +24,10 @@ const config: Config = {
         inter: ['var(--font-inter)', 'sans-serif'],
         montserrat: ['var(--font-montserrat)', 'sans-serif'],
       },
+      colors: {
+        orange: '#D17140',
+        'hero-blue': '#387BBF',
+      },
     },
   },
   plugins: [],
