@@ -1,0 +1,188 @@
+[
+  {
+    "type": ["tile"],
+    "pictures": [],
+    "name": "Italijanske pločice Bela 30x60",
+    "dimensions": {
+      "width": 30,
+      "height": 60,
+      "thickness": 8
+    },
+    "price": 1250,
+    "categories": ["Top artikli", "Najpopularnije", "Zidne"],
+    "onSale": "false",
+    "class": ["Prva klasa"],
+    "color": ["Bela"],
+    "purpose": ["Unutrašnje", "Zidne"],
+    "manufacturer": ["Savoia Italia"]
+  },
+  {
+    "type": ["tile"],
+    "pictures": [],
+    "name": "Španske pločice Siva 60x60",
+    "dimensions": {
+      "width": 60,
+      "height": 60,
+      "thickness": 10
+    },
+    "price": 1890,
+    "categories": ["Naša preporuka", "Podne", "2cm debljina"],
+    "onSale": "true",
+    "class": ["Prva klasa"],
+    "color": ["Siva"],
+    "purpose": ["Spoljne", "Podne"],
+    "manufacturer": ["Cristal Ceramicas"]
+  },
+  {
+    "type": ["tile"],
+    "pictures": [],
+    "name": "Turske pločice Braon 45x45",
+    "dimensions": {
+      "width": 45,
+      "height": 45,
+      "thickness": 9
+    },
+    "price": 1450,
+    "categories": ["Top ponuda", "Najpopularnije"],
+    "onSale": "true",
+    "class": ["Druga klasa"],
+    "color": ["Braon"],
+    "purpose": ["Unutrašnje", "Podne"],
+    "manufacturer": ["Yurtbay Seramik"]
+  },
+  {
+    "type": ["tile"],
+    "pictures": [],
+    "name": "Italijanske kupatilske pločice Plava 20x30",
+    "dimensions": {
+      "width": 20,
+      "height": 30,
+      "thickness": 7
+    },
+    "price": 980,
+    "categories": ["Oprema za kupatilo", "Kupatilske", "Top artikli"],
+    "onSale": "false",
+    "class": ["Prva klasa"],
+    "color": ["Plava"],
+    "purpose": ["Kupatilske", "Zidne"],
+    "manufacturer": ["Castel Vetro"]
+  },
+  {
+    "type": ["tile"],
+    "pictures": [],
+    "name": "Tersane pločice Siva 30x30",
+    "dimensions": {
+      "width": 30,
+      "height": 30,
+      "thickness": 12
+    },
+    "price": 2100,
+    "categories": ["Tersane", "2cm debljina"],
+    "onSale": "false",
+    "class": ["Prva klasa"],
+    "color": ["Siva"],
+    "purpose": ["Tersane", "Podne"],
+    "manufacturer": ["Aglasian Granito"]
+  },
+  {
+    "type": ["tile"],
+    "pictures": [],
+    "name": "Spoljne pločice Bela 40x40",
+    "dimensions": {
+      "width": 40,
+      "height": 40,
+      "thickness": 10
+    },
+    "price": 1650,
+    "categories": ["Naša preporuka", "Spoljne"],
+    "onSale": "true",
+    "class": ["Prva klasa"],
+    "color": ["Bela"],
+    "purpose": ["Spoljne", "Podne"],
+    "manufacturer": ["Cristal Ceramicas"]
+  },
+  {
+    "type": ["tile"],
+    "pictures": [],
+    "name": "Zidne pločice Plava 25x40",
+    "dimensions": {
+      "width": 25,
+      "height": 40,
+      "thickness": 7
+    },
+    "price": 1120,
+    "categories": ["Najpopularnije", "Zidne"],
+    "onSale": "false",
+    "class": ["Druga klasa"],
+    "color": ["Plava"],
+    "purpose": ["Unutrašnje", "Zidne"],
+    "manufacturer": ["Yurtbay Seramik"]
+  },
+  {
+    "type": ["tile"],
+    "pictures": [],
+    "name": "Podne pločice Braon 50x50",
+    "dimensions": {
+      "width": 50,
+      "height": 50,
+      "thickness": 9
+    },
+    "price": 1750,
+    "categories": ["Top ponuda", "Podne"],
+    "onSale": "true",
+    "class": ["Prva klasa"],
+    "color": ["Braon"],
+    "purpose": ["Unutrašnje", "Podne"],
+    "manufacturer": ["Savoia Italia"]
+  },
+  {
+    "type": ["additional_product"],
+    "pictures": [],
+    "name": "Fugirana masa Bela 2kg",
+    "price": 450,
+    "categories": ["Oprema za kupatilo"],
+    "onSale": "false"
+  },
+  {
+    "type": ["additional_product"],
+    "pictures": [],
+    "name": "Lepak za pločice 25kg",
+    "price": 1200,
+    "categories": ["Oprema za kupatilo"],
+    "onSale": "false"
+  },
+  {
+    "type": ["tile"],
+    "pictures": [],
+    "name": "Kupatilske pločice Bela 15x20",
+    "dimensions": {
+      "width": 15,
+      "height": 20,
+      "thickness": 6
+    },
+    "price": 850,
+    "categories": ["Oprema za kupatilo", "Kupatilske", "Top artikli"],
+    "onSale": "true",
+    "class": ["Prva klasa"],
+    "color": ["Bela"],
+    "purpose": ["Kupatilske", "Zidne"],
+    "manufacturer": ["Castel Vetro"]
+  },
+  {
+    "type": ["tile"],
+    "pictures": [],
+    "name": "Spoljne pločice Siva 50x50",
+    "dimensions": {
+      "width": 50,
+      "height": 50,
+      "thickness": 12
+    },
+    "price": 2200,
+    "categories": ["Spoljne", "2cm debljina", "Naša preporuka"],
+    "onSale": "false",
+    "class": ["Prva klasa"],
+    "color": ["Siva"],
+    "purpose": ["Spoljne", "Podne"],
+    "manufacturer": ["Aglasian Granito"]
+  }
+]
