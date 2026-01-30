@@ -1,19 +1,21 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import productsData from '@/products.json'
 import {
   type Product,
   type FilterState,
   getFilterOptions,
   getInitialFilterState,
   filterProducts,
-  normalizeProducts,
 } from '@/lib/products'
 import SearchBar from './SearchBar'
 import FiltersSidebar from './FiltersSidebar'
 import ActiveFilterTags, { type FilterTag } from './ActiveFilterTags'
 import ProductGrid from './ProductGrid'
+
+export interface ProductsSectionProps {
+  products: Product[]
+}
 
 function slugify(s: string): string {
   return s
@@ -41,22 +43,21 @@ function buildActiveTags(filters: FilterState): FilterTag[] {
   return tags
 }
 
-const products = normalizeProducts(productsData as Product[])
 const INITIAL_PAGE_SIZE = 9
 const LOAD_MORE_SIZE = 9
 const SCROLL_DELAY_MS = 150
 
-export default function ProductsSection() {
+export default function ProductsSection({ products }: ProductsSectionProps) {
   const [search, setSearch] = useState('')
   const [filters, setFilters] = useState<FilterState>(getInitialFilterState())
   const [visibleCount, setVisibleCount] = useState(INITIAL_PAGE_SIZE)
   const resultsRef = useRef<HTMLDivElement>(null)
   const isInitialMount = useRef(true)
 
-  const filterOptions = useMemo(() => getFilterOptions(products), [])
+  const filterOptions = useMemo(() => getFilterOptions(products), [products])
   const filteredProducts = useMemo(
     () => filterProducts(products, filters, search),
-    [filters, search]
+    [products, filters, search]
   )
   const visibleProducts = useMemo(
     () => filteredProducts.slice(0, visibleCount),

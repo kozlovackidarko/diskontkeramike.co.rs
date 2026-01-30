@@ -1,0 +1,26 @@
+fragment ProductsParts on Products {
+  __typename
+  products {
+    __typename
+    type
+    pictures {
+      __typename
+      src
+    }
+    name
+    dimensions {
+      __typename
+      width
+      height
+      thickness
+    }
+    price
+    oldPrice
+    categories
+    onSale
+    class
+    color
+    purpose
+    manufacturer
+  }
+}

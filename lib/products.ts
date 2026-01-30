@@ -43,6 +43,43 @@ export function normalizeProductImage(picturePath: string): string {
   return `/images/product-images/${basename}`
 }
 
+/** Tina/content shape: pictures can be { src } objects or string paths */
+export function mapContentProductsToProducts(
+  items: Array<{
+    type: string[]
+    pictures: Array<{ src?: string } | string>
+    name: string
+    dimensions?: { width: number; height: number; thickness: number }
+    price: number
+    oldPrice?: number
+    categories: string[]
+    onSale: boolean
+    class?: string
+    color?: string
+    purpose?: string[]
+    manufacturer?: string
+  }>
+): Product[] {
+  return items
+    .filter((p): p is typeof p & { dimensions: { width: number; height: number; thickness: number } } =>
+      p.dimensions != null && typeof p.dimensions.width === 'number' && typeof p.dimensions.height === 'number' && typeof p.dimensions.thickness === 'number'
+    )
+    .map((p) => ({
+      type: p.type ?? [],
+      pictures: (p.pictures ?? []).map((pic) => (typeof pic === 'string' ? pic : pic?.src ?? '')),
+      name: p.name,
+      dimensions: p.dimensions,
+      price: p.price,
+      oldPrice: p.oldPrice,
+      categories: p.categories ?? [],
+      onSale: p.onSale,
+      class: p.class ?? '',
+      color: p.color ?? '',
+      purpose: p.purpose ?? [],
+      manufacturer: p.manufacturer ?? '',
+    }))
+}
+
 export function normalizeProducts(products: Product[]): Product[] {
   return products.map((p) => ({
     ...p,
