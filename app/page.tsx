@@ -1,6 +1,7 @@
 import Header from '@/components/Header/Header'
 import Hero from '@/components/Hero/Hero'
 import Divider from '@/components/Divider/Divider'
+import ProductsSection from '@/components/ProductsSection/ProductsSection'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <main className="min-h-screen">
         <Hero />
         <Divider />
+        <ProductsSection />
       </main>
     </>
   )

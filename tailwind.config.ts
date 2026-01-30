@@ -26,7 +26,13 @@ const config: Config = {
       },
       colors: {
         orange: '#D17140',
-        'hero-blue': '#387BBF',
+        blue: '#387BBF',
+        black: '#3A3A3A',
+        'black-check': '#333333',
+        red: '#C63939',
+        'off-white': '#F5F5F5',
+        white: '#FFFFFF',
+        gray: '#999999'
       },
     },
   },
