@@ -165,37 +165,32 @@ export type CollectionDocumentsArgs = {
 
 export type DocumentNode = Products | Folder;
 
-export type ProductsProductsPictures = {
-  __typename?: 'ProductsProductsPictures';
+export type ProductsPictures = {
+  __typename?: 'ProductsPictures';
   src: Scalars['String']['output'];
 };
 
-export type ProductsProductsDimensions = {
-  __typename?: 'ProductsProductsDimensions';
-  width?: Maybe<Scalars['Float']['output']>;
-  height?: Maybe<Scalars['Float']['output']>;
-  thickness?: Maybe<Scalars['Float']['output']>;
-};
-
-export type ProductsProducts = {
-  __typename?: 'ProductsProducts';
-  type: Array<Scalars['String']['output']>;
-  pictures: Array<ProductsProductsPictures>;
-  name: Scalars['String']['output'];
-  dimensions?: Maybe<ProductsProductsDimensions>;
-  price: Scalars['Float']['output'];
-  oldPrice?: Maybe<Scalars['Float']['output']>;
-  categories: Array<Scalars['String']['output']>;
-  onSale?: Maybe<Scalars['Boolean']['output']>;
-  class?: Maybe<Scalars['String']['output']>;
-  color?: Maybe<Scalars['String']['output']>;
-  purpose?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  manufacturer?: Maybe<Scalars['String']['output']>;
+export type ProductsDimensions = {
+  __typename?: 'ProductsDimensions';
+  width: Scalars['Float']['output'];
+  height: Scalars['Float']['output'];
+  thickness: Scalars['Float']['output'];
 };
 
 export type Products = Node & Document & {
   __typename?: 'Products';
-  products?: Maybe<Array<Maybe<ProductsProducts>>>;
+  type: Scalars['String']['output'];
+  pictures: Array<ProductsPictures>;
+  name: Scalars['String']['output'];
+  dimensions: ProductsDimensions;
+  price: Scalars['Float']['output'];
+  oldPrice?: Maybe<Scalars['Float']['output']>;
+  categories: Array<Scalars['String']['output']>;
+  onSale?: Maybe<Scalars['Boolean']['output']>;
+  class: Scalars['String']['output'];
+  color: Scalars['String']['output'];
+  purpose: Array<Scalars['String']['output']>;
+  manufacturer: Scalars['String']['output'];
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -215,7 +210,7 @@ export type ImageFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type ProductsProductsPicturesFilter = {
+export type ProductsPicturesFilter = {
   src?: InputMaybe<ImageFilter>;
 };
 
@@ -229,7 +224,7 @@ export type NumberFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
 };
 
-export type ProductsProductsDimensionsFilter = {
+export type ProductsDimensionsFilter = {
   width?: InputMaybe<NumberFilter>;
   height?: InputMaybe<NumberFilter>;
   thickness?: InputMaybe<NumberFilter>;
@@ -240,11 +235,11 @@ export type BooleanFilter = {
   exists?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
-export type ProductsProductsFilter = {
+export type ProductsFilter = {
   type?: InputMaybe<StringFilter>;
-  pictures?: InputMaybe<ProductsProductsPicturesFilter>;
+  pictures?: InputMaybe<ProductsPicturesFilter>;
   name?: InputMaybe<StringFilter>;
-  dimensions?: InputMaybe<ProductsProductsDimensionsFilter>;
+  dimensions?: InputMaybe<ProductsDimensionsFilter>;
   price?: InputMaybe<NumberFilter>;
   oldPrice?: InputMaybe<NumberFilter>;
   categories?: InputMaybe<StringFilter>;
@@ -253,10 +248,6 @@ export type ProductsProductsFilter = {
   color?: InputMaybe<StringFilter>;
   purpose?: InputMaybe<StringFilter>;
   manufacturer?: InputMaybe<StringFilter>;
-};
-
-export type ProductsFilter = {
-  products?: InputMaybe<ProductsProductsFilter>;
 };
 
 export type ProductsConnectionEdges = {
@@ -337,21 +328,21 @@ export type DocumentMutation = {
   products?: InputMaybe<ProductsMutation>;
 };
 
-export type ProductsProductsPicturesMutation = {
+export type ProductsPicturesMutation = {
   src?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProductsProductsDimensionsMutation = {
+export type ProductsDimensionsMutation = {
   width?: InputMaybe<Scalars['Float']['input']>;
   height?: InputMaybe<Scalars['Float']['input']>;
   thickness?: InputMaybe<Scalars['Float']['input']>;
 };
 
-export type ProductsProductsMutation = {
-  type?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  pictures?: InputMaybe<Array<InputMaybe<ProductsProductsPicturesMutation>>>;
+export type ProductsMutation = {
+  type?: InputMaybe<Scalars['String']['input']>;
+  pictures?: InputMaybe<Array<InputMaybe<ProductsPicturesMutation>>>;
   name?: InputMaybe<Scalars['String']['input']>;
-  dimensions?: InputMaybe<ProductsProductsDimensionsMutation>;
+  dimensions?: InputMaybe<ProductsDimensionsMutation>;
   price?: InputMaybe<Scalars['Float']['input']>;
   oldPrice?: InputMaybe<Scalars['Float']['input']>;
   categories?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
@@ -362,18 +353,14 @@ export type ProductsProductsMutation = {
   manufacturer?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type ProductsMutation = {
-  products?: InputMaybe<Array<InputMaybe<ProductsProductsMutation>>>;
-};
-
-export type ProductsPartsFragment = { __typename: 'Products', products?: Array<{ __typename: 'ProductsProducts', type: Array<string>, name: string, price: number, oldPrice?: number | null, categories: Array<string>, onSale?: boolean | null, class?: string | null, color?: string | null, purpose?: Array<string | null> | null, manufacturer?: string | null, pictures: Array<{ __typename: 'ProductsProductsPictures', src: string }>, dimensions?: { __typename: 'ProductsProductsDimensions', width?: number | null, height?: number | null, thickness?: number | null } | null } | null> | null };
+export type ProductsPartsFragment = { __typename: 'Products', type: string, name: string, price: number, oldPrice?: number | null, categories: Array<string>, onSale?: boolean | null, class: string, color: string, purpose: Array<string>, manufacturer: string, pictures: Array<{ __typename: 'ProductsPictures', src: string }>, dimensions: { __typename: 'ProductsDimensions', width: number, height: number, thickness: number } };
 
 export type ProductsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type ProductsQuery = { __typename?: 'Query', products: { __typename: 'Products', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, products?: Array<{ __typename: 'ProductsProducts', type: Array<string>, name: string, price: number, oldPrice?: number | null, categories: Array<string>, onSale?: boolean | null, class?: string | null, color?: string | null, purpose?: Array<string | null> | null, manufacturer?: string | null, pictures: Array<{ __typename: 'ProductsProductsPictures', src: string }>, dimensions?: { __typename: 'ProductsProductsDimensions', width?: number | null, height?: number | null, thickness?: number | null } | null } | null> | null } };
+export type ProductsQuery = { __typename?: 'Query', products: { __typename: 'Products', id: string, type: string, name: string, price: number, oldPrice?: number | null, categories: Array<string>, onSale?: boolean | null, class: string, color: string, purpose: Array<string>, manufacturer: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, pictures: Array<{ __typename: 'ProductsPictures', src: string }>, dimensions: { __typename: 'ProductsDimensions', width: number, height: number, thickness: number } } };
 
 export type ProductsConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -385,34 +372,31 @@ export type ProductsConnectionQueryVariables = Exact<{
 }>;
 
 
-export type ProductsConnectionQuery = { __typename?: 'Query', productsConnection: { __typename?: 'ProductsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ProductsConnectionEdges', cursor: string, node?: { __typename: 'Products', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, products?: Array<{ __typename: 'ProductsProducts', type: Array<string>, name: string, price: number, oldPrice?: number | null, categories: Array<string>, onSale?: boolean | null, class?: string | null, color?: string | null, purpose?: Array<string | null> | null, manufacturer?: string | null, pictures: Array<{ __typename: 'ProductsProductsPictures', src: string }>, dimensions?: { __typename: 'ProductsProductsDimensions', width?: number | null, height?: number | null, thickness?: number | null } | null } | null> | null } | null } | null> | null } };
+export type ProductsConnectionQuery = { __typename?: 'Query', productsConnection: { __typename?: 'ProductsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ProductsConnectionEdges', cursor: string, node?: { __typename: 'Products', id: string, type: string, name: string, price: number, oldPrice?: number | null, categories: Array<string>, onSale?: boolean | null, class: string, color: string, purpose: Array<string>, manufacturer: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, pictures: Array<{ __typename: 'ProductsPictures', src: string }>, dimensions: { __typename: 'ProductsDimensions', width: number, height: number, thickness: number } } | null } | null> | null } };
 
 export const ProductsPartsFragmentDoc = gql`
     fragment ProductsParts on Products {
   __typename
-  products {
+  type
+  pictures {
     __typename
-    type
-    pictures {
-      __typename
-      src
-    }
-    name
-    dimensions {
-      __typename
-      width
-      height
-      thickness
-    }
-    price
-    oldPrice
-    categories
-    onSale
-    class
-    color
-    purpose
-    manufacturer
+    src
   }
+  name
+  dimensions {
+    __typename
+    width
+    height
+    thickness
+  }
+  price
+  oldPrice
+  categories
+  onSale
+  class
+  color
+  purpose
+  manufacturer
 }
     `;
 export const ProductsDocument = gql`
@@ -528,7 +512,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "https://content.tinajs.io/2.1/content/9dfaf074-6f3c-43cb-9143-20df7d7d496d/github/main",
+        url: "http://localhost:4001/graphql",
         queries,
       })
     )

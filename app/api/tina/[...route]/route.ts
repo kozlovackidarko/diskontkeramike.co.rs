@@ -11,10 +11,13 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       )
     }
-    const result = await client.request({
-      query,
-      variables: variables ?? {},
-    })
+    const result = await client.request(
+      {
+        query,
+        variables: variables ?? {},
+      },
+      {}
+    )
     return NextResponse.json(result)
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Tina request failed'

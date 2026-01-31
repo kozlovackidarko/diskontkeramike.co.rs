@@ -87,33 +87,29 @@ type Collection {
 
 union DocumentNode = Products | Folder
 
-type ProductsProductsPictures {
+type ProductsPictures {
   src: String!
 }
 
-type ProductsProductsDimensions {
-  width: Float
-  height: Float
-  thickness: Float
+type ProductsDimensions {
+  width: Float!
+  height: Float!
+  thickness: Float!
 }
 
-type ProductsProducts {
-  type: [String!]!
-  pictures: [ProductsProductsPictures!]!
+type Products implements Node & Document {
+  type: String!
+  pictures: [ProductsPictures!]!
   name: String!
-  dimensions: ProductsProductsDimensions
+  dimensions: ProductsDimensions!
   price: Float!
   oldPrice: Float
   categories: [String!]!
   onSale: Boolean
-  class: String
-  color: String
-  purpose: [String]
-  manufacturer: String
-}
-
-type Products implements Node & Document {
-  products: [ProductsProducts]
+  class: String!
+  color: String!
+  purpose: [String!]!
+  manufacturer: String!
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -133,7 +129,7 @@ input ImageFilter {
   in: [String]
 }
 
-input ProductsProductsPicturesFilter {
+input ProductsPicturesFilter {
   src: ImageFilter
 }
 
@@ -147,7 +143,7 @@ input NumberFilter {
   in: [Float]
 }
 
-input ProductsProductsDimensionsFilter {
+input ProductsDimensionsFilter {
   width: NumberFilter
   height: NumberFilter
   thickness: NumberFilter
@@ -158,11 +154,11 @@ input BooleanFilter {
   exists: Boolean
 }
 
-input ProductsProductsFilter {
+input ProductsFilter {
   type: StringFilter
-  pictures: ProductsProductsPicturesFilter
+  pictures: ProductsPicturesFilter
   name: StringFilter
-  dimensions: ProductsProductsDimensionsFilter
+  dimensions: ProductsDimensionsFilter
   price: NumberFilter
   oldPrice: NumberFilter
   categories: StringFilter
@@ -171,10 +167,6 @@ input ProductsProductsFilter {
   color: StringFilter
   purpose: StringFilter
   manufacturer: StringFilter
-}
-
-input ProductsFilter {
-  products: ProductsProductsFilter
 }
 
 type ProductsConnectionEdges {
@@ -207,21 +199,21 @@ input DocumentMutation {
   products: ProductsMutation
 }
 
-input ProductsProductsPicturesMutation {
+input ProductsPicturesMutation {
   src: String
 }
 
-input ProductsProductsDimensionsMutation {
+input ProductsDimensionsMutation {
   width: Float
   height: Float
   thickness: Float
 }
 
-input ProductsProductsMutation {
-  type: [String]
-  pictures: [ProductsProductsPicturesMutation]
+input ProductsMutation {
+  type: String
+  pictures: [ProductsPicturesMutation]
   name: String
-  dimensions: ProductsProductsDimensionsMutation
+  dimensions: ProductsDimensionsMutation
   price: Float
   oldPrice: Float
   categories: [String]
@@ -230,10 +222,6 @@ input ProductsProductsMutation {
   color: String
   purpose: [String]
   manufacturer: String
-}
-
-input ProductsMutation {
-  products: [ProductsProductsMutation]
 }
 
 schema {

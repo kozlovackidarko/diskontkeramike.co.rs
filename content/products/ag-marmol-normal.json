@@ -1,0 +1,15 @@
+{
+  "type": "tile",
+  "pictures": [
+    { "src": "images/product-images/marmol-30x60.jpg" }
+  ],
+  "name": "AG Marmol Normal",
+  "dimensions": { "width": 60, "height": 30, "thickness": 6 },
+  "price": 1899,
+  "categories": ["Najpopularnije", "Top artikli"],
+  "onSale": false,
+  "class": "Druga klasa",
+  "color": "Bela",
+  "purpose": ["Unutrašnje", "Zidne"],
+  "manufacturer": "Aglasian Granito"
+}

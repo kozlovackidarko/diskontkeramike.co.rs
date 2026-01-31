@@ -8,18 +8,16 @@ import {
   type Product,
 } from '@/lib/products'
 import { client } from '@/tina/__generated__/client'
-import contentProducts from '@/content/products.json'
 
 async function getProducts(): Promise<Product[]> {
   try {
-    const result = await client.queries.products({ relativePath: 'products.json' })
-    const raw = result?.data?.products?.products ?? []
-    const mapped = mapContentProductsToProducts(raw as Parameters<typeof mapContentProductsToProducts>[0])
+    const result = await client.queries.productsConnection({ first: 500 })
+    const edges = result?.data?.productsConnection?.edges ?? []
+    const nodes = edges.map((e) => e?.node).filter(Boolean) as Parameters<typeof mapContentProductsToProducts>[0]
+    const mapped = mapContentProductsToProducts(nodes)
     return normalizeProducts(mapped)
   } catch {
-    const payload = contentProducts as { products: Parameters<typeof mapContentProductsToProducts>[0] }
-    const mapped = mapContentProductsToProducts(payload.products ?? [])
-    return normalizeProducts(mapped)
+    return []
   }
 }
 

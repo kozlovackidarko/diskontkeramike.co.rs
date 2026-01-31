@@ -1,0 +1,15 @@
+{
+  "type": "additional_product",
+  "pictures": [
+    { "src": "images/product-images/marmol-48x48.jpg" }
+  ],
+  "name": "AG Marmol Square",
+  "dimensions": { "width": 48, "height": 48, "thickness": 10 },
+  "price": 2499,
+  "categories": ["Najpopularnije", "Top artikli", "Naša preporuka"],
+  "onSale": false,
+  "class": "Druga klasa",
+  "color": "Bela",
+  "purpose": ["Unutrašnje", "Podne"],
+  "manufacturer": "Aglasian Granito"
+}

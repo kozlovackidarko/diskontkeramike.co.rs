@@ -1,0 +1,16 @@
+{
+  "type": "tile",
+  "pictures": [
+    { "src": "images/product-images/cemento-grey-60x60.jpg" }
+  ],
+  "name": "YS Cemento Grey",
+  "dimensions": { "width": 60, "height": 60, "thickness": 2 },
+  "price": 1199,
+  "oldPrice": 1599,
+  "categories": ["Naša preporuka", "Top ponuda", "2cm debljina"],
+  "onSale": true,
+  "class": "Prva klasa",
+  "color": "Siva",
+  "purpose": ["Spoljne", "Podne"],
+  "manufacturer": "Yurtbay Seramik"
+}

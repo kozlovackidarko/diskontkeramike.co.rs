@@ -1,0 +1,17 @@
+{
+  "type": "tile",
+  "pictures": [],
+  "name": "New Sample Product",
+  "dimensions": {
+    "width": 0,
+    "height": 0,
+    "thickness": 0
+  },
+  "price": 0,
+  "categories": [],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": "Bela",
+  "purpose": [],
+  "manufacturer": "Yurtbay Seramik"
+}

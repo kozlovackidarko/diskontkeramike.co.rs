@@ -1,0 +1,17 @@
+{
+  "type": "tile",
+  "pictures": [
+    { "src": "images/product-images/icon-white-60x60.jpg" },
+    { "src": "images/product-images/baron-beige-20x120.jpg" },
+    { "src": "images/product-images/alda-beyaz-40x60.jpg" }
+  ],
+  "name": "AG Icon White",
+  "dimensions": { "width": 60, "height": 60, "thickness": 6 },
+  "price": 1499,
+  "categories": ["Najpopularnije", "Top artikli"],
+  "onSale": false,
+  "class": "Druga klasa",
+  "color": "Bela",
+  "purpose": ["Unutrašnje", "Zidne"],
+  "manufacturer": "Aglasian Granito"
+}
