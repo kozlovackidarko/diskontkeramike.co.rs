@@ -3,6 +3,8 @@ import Hero from '@/components/Hero/Hero'
 import Divider from '@/components/Divider/Divider'
 import ProductsSection from '@/components/ProductsSection/ProductsSection'
 import PartnersSection from '@/components/PartnersSection/PartnersSection'
+import ContactInfo from '@/components/ContactInfo/ContactInfo'
+import Footer from '@/components/Footer/Footer'
 import {
   mapContentProductsToProducts,
   normalizeProducts,
@@ -32,7 +34,9 @@ export default async function Home() {
         <Divider />
         <ProductsSection products={products} />
         <PartnersSection />
+        <ContactInfo />
       </main>
+      <Footer />
     </>
   )
 }
