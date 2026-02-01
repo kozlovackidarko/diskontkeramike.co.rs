@@ -1,15 +1,28 @@
 {
   "type": "tile",
   "pictures": [
-    { "src": "images/product-images/hera-60x60.jpg" }
+    {
+      "src": "/images/product-imagesimages/product-images/hera-60x60.jpg"
+    }
   ],
   "name": "AG Hera",
-  "dimensions": { "width": 60, "height": 60, "thickness": 10 },
-  "price": 999,
-  "categories": ["Najpopularnije", "Top artikli"],
-  "onSale": false,
+  "dimensions": {
+    "width": 60,
+    "height": 60,
+    "thickness": 10
+  },
+  "price": 799,
+  "oldPrice": 999,
+  "categories": [
+    "Najpopularnije",
+    "Top artikli"
+  ],
+  "onSale": true,
   "class": "Druga klasa",
   "color": "Bela",
-  "purpose": ["Unutrašnje", "Zidne"],
+  "purpose": [
+    "Unutrašnje",
+    "Zidne"
+  ],
   "manufacturer": "Aglasian Granito"
 }
