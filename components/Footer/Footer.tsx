@@ -8,17 +8,17 @@ const COMPANY = {
 }
 
 const USEFUL_LINKS_LEFT = [
-  { label: 'Naša preporuka', href: '/preporuka' },
-  { label: 'Partneri', href: '#partneri' },
+  { label: 'Naša preporuka', href: '/nasa-preporuka' },
+  { label: 'Partneri', href: '/partneri' },
   { label: 'O nama', href: '/o-nama' },
-  { label: 'Kontaktirajte nas', href: '#kontakt' },
+  { label: 'Kontaktirajte nas', href: '/kontakt' },
 ]
 
 const USEFUL_LINKS_RIGHT = [
-  { label: 'Top ponuda', href: '/preporuka' },
-  { label: 'Top artikli', href: '/preporuka' },
-  { label: 'Najpovoljnije', href: '/preporuka' },
-  { label: 'Najpopularnije', href: '/preporuka' },
+  { label: 'Svi proizvodi', href: '/svi-proizvodi' },
+  { label: 'Top ponuda', href: '/top-ponuda' },
+  { label: 'Top artikli', href: '/top-artikli' },
+  { label: 'Najpopularnije', href: '/najpopularnije' },
 ]
 
 export default function Footer() {
@@ -65,7 +65,7 @@ export default function Footer() {
                     <li key={link.label} className="py-3">
                       <a
                         href={link.href}
-                        className="hover:opacity-90 transition-opacity py-3"
+                        className="underline hover:opacity-90 transition-opacity py-3"
                       >
                         {link.label}
                       </a>
@@ -77,7 +77,7 @@ export default function Footer() {
                     <li key={link.label} className="py-3">
                       <a
                         href={link.href}
-                        className="hover:opacity-90 transition-opacity py-3"
+                        className="underline hover:opacity-90 transition-opacity py-3"
                       >
                         {link.label}
                       </a>

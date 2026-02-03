@@ -15,6 +15,7 @@ import ProductGrid from './ProductGrid'
 
 export interface ProductsSectionProps {
   products: Product[]
+  bg?: 'white' | 'off-white'
 }
 
 function slugify(s: string): string {
@@ -47,7 +48,7 @@ const INITIAL_PAGE_SIZE = 9
 const LOAD_MORE_SIZE = 9
 const SCROLL_DELAY_MS = 150
 
-export default function ProductsSection({ products }: ProductsSectionProps) {
+export default function ProductsSection({ products, bg = 'off-white' }: ProductsSectionProps) {
   const [search, setSearch] = useState('')
   const [filters, setFilters] = useState<FilterState>(getInitialFilterState())
   const [visibleCount, setVisibleCount] = useState(INITIAL_PAGE_SIZE)
@@ -116,7 +117,7 @@ export default function ProductsSection({ products }: ProductsSectionProps) {
   }
 
   return (
-    <section className="bg-off-white py-8">
+    <section className={`${bg === 'white' ? 'bg-white' : 'bg-off-white'} py-8`}>
       <div className="px-4 sm:px-8">
         <div className="max-w-[1280px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">

@@ -3,9 +3,14 @@ const PHONE_LINK = '+381695662009'
 const EMAIL = 'kozlovacki.darko@gmail.com'
 const MAP_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2828.3430214058226!2d20.475538399999998!3d44.855311199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a64c9320a48cb%3A0xba8fef1b34a48a4c!2sDiskont%20Keramike!5e0!3m2!1ssr!2snl!4v1769982389130!5m2!1ssr!2snl'
 
-export default function ContactInfo() {
+export interface ContactInfoProps {
+  bg?: 'white' | 'off-white'
+}
+
+export default function ContactInfo({ bg = 'white' }: ContactInfoProps) {
+  const bgClass = bg === 'off-white' ? 'bg-off-white' : 'bg-white'
   return (
-    <section className="bg-white py-8 md:py-16 lg:py-20">
+    <section className={`${bgClass} py-8 md:py-16 lg:py-20`}>
       <div className="px-4 sm:px-8">
         <div className="max-w-[1280px] mx-auto">
           <h2 className="font-montserrat font-bold text-black text-2xl sm:text-3xl md:text-4xl mb-8 md:mb-12">

@@ -14,7 +14,7 @@ export default function Header() {
 
   const navLinks: NavLink[] = [
     { label: 'Početna', href: '/' },
-    { label: 'Naša preporuka', href: '/preporuka' },
+    { label: 'Naša preporuka', href: '/nasa-preporuka' },
     { label: 'Partneri', href: '/partneri' },
     { label: 'O nama', href: '/o-nama' },
   ]
@@ -23,7 +23,9 @@ export default function Header() {
     <header className="bg-off-white relative">
       <div className="px-4 sm:px-8 py-3">
         <div className="max-w-[1280px] mx-auto flex items-center justify-between relative">
-          <Logo />
+          <a href="/" className="flex items-center" aria-label="Početna">
+            <Logo />
+          </a>
 
           <div className="hidden xl:flex items-center">
             <nav className="flex items-center">
@@ -38,23 +40,35 @@ export default function Header() {
               ))}
             </nav>
             <div className="flex items-center gap-4 ml-4">
-              <button className="bg-red text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity">
+              <a
+                href="/top-ponuda"
+                className="inline-block bg-red text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity"
+              >
                 Top ponuda
-              </button>
-              <button className="bg-blue text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity">
+              </a>
+              <a
+                href="/kontakt"
+                className="inline-block bg-blue text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity"
+              >
                 Kontakt
-              </button>
+              </a>
             </div>
           </div>
 
           <div className="flex items-center gap-4 xl:hidden relative">
             <div className="hidden xs:flex items-center gap-4">
-              <button className="bg-red text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity">
+              <a
+                href="/top-ponuda"
+                className="inline-block bg-red text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity"
+              >
                 Top ponuda
-              </button>
-              <button className="hidden md:block bg-blue text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity">
+              </a>
+              <a
+                href="/kontakt"
+                className="hidden md:block inline-block bg-blue text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity"
+              >
                 Kontakt
-              </button>
+              </a>
             </div>
 
             <button
@@ -113,12 +127,20 @@ export default function Header() {
                   </a>
                 ))}
                 <div className="md:hidden flex flex-col gap-2 px-4 pb-2">
-                  <button className="xs:hidden bg-red text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity w-full">
+                  <a
+                    href="/top-ponuda"
+                    className="xs:hidden inline-block bg-red text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity w-full text-center"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     Top ponuda
-                  </button>
-                  <button className="md:hidden bg-blue text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity w-full">
+                  </a>
+                  <a
+                    href="/kontakt"
+                    className="md:hidden inline-block bg-blue text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity w-full text-center"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     Kontakt
-                  </button>
+                  </a>
                 </div>
               </nav>
             </div>
