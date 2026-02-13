@@ -1,15 +1,27 @@
 {
   "type": "tile",
   "pictures": [
-    { "src": "images/product-images/alda-beyaz-40x60.jpg" }
+    {
+      "src": "/images/product-images/alda-beyaz-40x60.jpg"
+    }
   ],
   "name": "YS Alda Beyaz",
-  "dimensions": { "width": 40, "height": 60, "thickness": 6 },
+  "dimensions": {
+    "width": 40,
+    "height": 60,
+    "thickness": 6
+  },
   "price": 1999,
-  "categories": ["Top artikli", "Najpopularnije"],
+  "categories": [
+    "Top artikli",
+    "Najpopularnije"
+  ],
   "onSale": false,
   "class": "Prva klasa",
   "color": "Siva",
-  "purpose": ["Unutrašnje", "Zidne"],
+  "purpose": [
+    "Unutrašnje",
+    "Zidne"
+  ],
   "manufacturer": "Yurtbay Seramik"
 }
