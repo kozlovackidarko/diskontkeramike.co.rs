@@ -1,16 +1,29 @@
 {
   "type": "tile",
   "pictures": [
-    { "src": "images/product-images/cemento-white-60x60.jpg" }
+    {
+      "src": "/images/product-images/cemento-white-60x60.jpg"
+    }
   ],
   "name": "YS Cemento White",
-  "dimensions": { "width": 60, "height": 60, "thickness": 2 },
+  "dimensions": {
+    "width": 60,
+    "height": 60,
+    "thickness": 2
+  },
   "price": 1199,
   "oldPrice": 2499,
-  "categories": ["Naša preporuka", "Top ponuda", "2cm debljina"],
+  "categories": [
+    "Naša preporuka",
+    "Top ponuda",
+    "2cm debljina"
+  ],
   "onSale": true,
   "class": "Prva klasa",
   "color": "Bela",
-  "purpose": ["Spoljne", "Podne"],
+  "purpose": [
+    "Spoljne",
+    "Podne"
+  ],
   "manufacturer": "Yurtbay Seramik"
 }
