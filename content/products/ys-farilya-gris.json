@@ -1,16 +1,28 @@
 {
   "type": "tile",
   "pictures": [
-    { "src": "images/product-images/farilya-gris-25x45.jpg" }
+    {
+      "src": "/images/product-images/farilya-gris-25x45.jpg"
+    }
   ],
   "name": "YS Farilya Gris",
-  "dimensions": { "width": 45, "height": 25, "thickness": 10 },
+  "dimensions": {
+    "width": 45,
+    "height": 25,
+    "thickness": 10
+  },
   "price": 1199,
   "oldPrice": 1999,
-  "categories": ["Naša preporuka", "Najpopularnije"],
+  "categories": [
+    "Naša preporuka",
+    "Najpopularnije"
+  ],
   "onSale": true,
   "class": "Prva klasa",
   "color": "Braon",
-  "purpose": ["Spoljne", "Podne"],
+  "purpose": [
+    "Spoljne",
+    "Podne"
+  ],
   "manufacturer": "Yurtbay Seramik"
 }
