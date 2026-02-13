@@ -1,16 +1,28 @@
 {
   "type": "tile",
   "pictures": [
-    { "src": "images/product-images/hera-white-30x60.jpg" }
+    {
+      "src": "/images/product-images/hera-white-30x60.jpg"
+    }
   ],
   "name": "YS Hera White",
-  "dimensions": { "width": 30, "height": 60, "thickness": 8 },
+  "dimensions": {
+    "width": 30,
+    "height": 60,
+    "thickness": 8
+  },
   "price": 1599,
   "oldPrice": 1799,
-  "categories": ["Naša preporuka", "Najpopularnije"],
+  "categories": [
+    "Naša preporuka",
+    "Najpopularnije"
+  ],
   "onSale": true,
   "class": "Prva klasa",
   "color": "Bela",
-  "purpose": ["Spoljne", "Podne"],
+  "purpose": [
+    "Spoljne",
+    "Podne"
+  ],
   "manufacturer": "Yurtbay Seramik"
 }
