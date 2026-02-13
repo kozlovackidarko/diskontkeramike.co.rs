@@ -1,15 +1,28 @@
 {
-  "type": "additional_product",
+  "type": "tile",
   "pictures": [
-    { "src": "images/product-images/marmol-48x48.jpg" }
+    {
+      "src": "/images/product-imagesimages/product-images/marmol-48x48.jpg"
+    }
   ],
   "name": "AG Marmol Square",
-  "dimensions": { "width": 48, "height": 48, "thickness": 10 },
+  "dimensions": {
+    "width": 48,
+    "height": 48,
+    "thickness": 10
+  },
   "price": 2499,
-  "categories": ["Najpopularnije", "Top artikli", "Naša preporuka"],
+  "categories": [
+    "Najpopularnije",
+    "Top artikli",
+    "Naša preporuka"
+  ],
   "onSale": false,
   "class": "Druga klasa",
   "color": "Bela",
-  "purpose": ["Unutrašnje", "Podne"],
+  "purpose": [
+    "Unutrašnje",
+    "Podne"
+  ],
   "manufacturer": "Aglasian Granito"
 }
