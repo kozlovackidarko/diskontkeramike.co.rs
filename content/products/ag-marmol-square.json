@@ -2,10 +2,10 @@
   "type": "tile",
   "pictures": [
     {
-      "src": "/images/product-imagesimages/product-images/marmol-48x48.jpg"
+      "src": "/images/product-images/marmol-48x48.jpg"
     }
   ],
-  "name": "AG Marmol Square",
+  "name": "AG Marmol 48x48",
   "dimensions": {
     "width": 48,
     "height": 48,
