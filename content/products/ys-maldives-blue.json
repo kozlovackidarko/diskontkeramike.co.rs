@@ -1,0 +1,27 @@
+{
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/maldives-blue-30x60.jpg"
+    }
+  ],
+  "name": "YS Maldives Blue",
+  "dimensions": {
+    "width": 60,
+    "height": 30,
+    "thickness": 8
+  },
+  "price": 2999,
+  "categories": [
+    "Top artikli",
+    "Naša preporuka"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": "Bela",
+  "purpose": [
+    "Unutrašnje",
+    "Kupatilske"
+  ],
+  "manufacturer": "Yurtbay Seramik"
+}
