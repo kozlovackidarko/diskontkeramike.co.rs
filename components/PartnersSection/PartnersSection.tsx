@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { assetUrl } from '@/lib/assetUrl'
 
 const PARTNERS = [
   { name: 'Cristal Ceramicas', image: '/images/partners-cristal-ceramicas.jpg', href: '#' },
@@ -26,7 +27,7 @@ export default function PartnersSection() {
                 >
                   <div className="absolute inset-0">
                     <Image
-                      src={partner.image}
+                      src={assetUrl(partner.image)}
                       alt={partner.name}
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -52,7 +53,7 @@ export default function PartnersSection() {
                 >
                   <div className="absolute inset-0">
                     <Image
-                      src={partner.image}
+                      src={assetUrl(partner.image)}
                       alt={partner.name}
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105"

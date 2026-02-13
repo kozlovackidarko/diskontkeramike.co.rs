@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import type { Product } from '@/lib/products'
+import { assetUrl } from '@/lib/assetUrl'
 import ProductPopup from './ProductPopup'
 
 interface ProductCardProps {
@@ -15,7 +16,7 @@ function formatPrice(price: number): string {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const [popupOpen, setPopupOpen] = useState(false)
-  const imgSrc = product.pictures[0] ?? '/images/hero-tiles.png'
+  const imgSrc = assetUrl(product.pictures[0] ?? '/images/hero-tiles.png')
   const dimensionsStr = `${product.dimensions.width}cm x ${product.dimensions.height}cm`
 
   return (
@@ -45,7 +46,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             className="absolute bottom-2 left-2 flex h-9 w-9 items-center justify-center rounded-sm bg-white/90 text-black shadow-[0_1px_3px_rgba(0,0,0,0.2),0_0_0_1px_rgba(0,0,0,0.1)] pointer-events-none"
             aria-hidden="true"
           >
-            <Image src="/icons/zoom-in.svg" alt="" width={18} height={18} />
+            <Image src={assetUrl('/icons/zoom-in.svg')} alt="" width={18} height={18} />
           </span>
         </div>
         <div className="flex flex-1 flex-col p-4">

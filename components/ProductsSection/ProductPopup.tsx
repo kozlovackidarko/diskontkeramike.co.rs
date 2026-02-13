@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import type { Product } from '@/lib/products'
+import { assetUrl } from '@/lib/assetUrl'
 
 interface ProductPopupProps {
   product: Product
@@ -15,7 +16,9 @@ function formatPrice(price: number): string {
 
 export default function ProductPopup({ product, onClose }: ProductPopupProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const pictures = product.pictures?.length ? product.pictures : ['/images/hero-tiles.png']
+  const pictures = product.pictures?.length
+    ? product.pictures.map(assetUrl)
+    : [assetUrl('/images/hero-tiles.png')]
   const hasMultiple = pictures.length > 1
 
   useEffect(() => {

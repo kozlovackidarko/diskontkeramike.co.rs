@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { assetUrl } from '@/lib/assetUrl'
 import Logo from './Logo'
 
 interface NavLink {
@@ -150,7 +151,7 @@ export default function Header() {
       </div>
       <div className="w-full h-[14px] md:h-[18px] relative overflow-hidden">
         <Image
-          src="/icons/divider.svg"
+          src={assetUrl('/icons/divider.svg')}
           alt=""
           fill
           className="object-cover"

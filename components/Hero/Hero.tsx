@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { assetUrl } from '@/lib/assetUrl'
 
 export interface HeroButton {
   label: string
@@ -56,13 +57,13 @@ export default function Hero({ title, subtitle, description, imageSrc, imageAlt,
             <div className="relative flex lg:justify-start">
               <div className="relative w-full lg:w-[480px] aspect-[16/9.2]">
                 <Image
-                  src={imageSrc}
+                  src={assetUrl(imageSrc)}
                   alt={imageAlt}
                   fill
                   className="object-cover"
                 />
                 <Image
-                  src="/icons/image-frame-hero.svg"
+                  src={assetUrl('/icons/image-frame-hero.svg')}
                   alt=""
                   fill
                   className="object-cover pointer-events-none"

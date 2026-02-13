@@ -1,10 +1,11 @@
 import Image from 'next/image'
+import { assetUrl } from '@/lib/assetUrl'
 
 export default function Logo() {
   return (
     <div className="flex items-center">
       <Image
-        src="/icons/logo.svg"
+        src={assetUrl('/icons/logo.svg')}
         alt="Diskont Keramike Logo"
         width={95}
         height={60}
