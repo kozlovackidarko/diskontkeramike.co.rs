@@ -9,11 +9,6 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true },
   basePath: isGitHubPages && repoName ? `/${repoName}` : '',
   assetPrefix: isGitHubPages && repoName ? `/${repoName}/` : '',
-  async redirects() {
-    return [
-      { source: '/admin', destination: '/admin/index.html', permanent: false },
-    ]
-  },
 }
 
 export default nextConfig

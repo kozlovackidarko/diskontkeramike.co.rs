@@ -1,6 +1,12 @@
 import { client } from '@/tina/__generated__/client'
 import { NextRequest, NextResponse } from 'next/server'
 
+export const dynamic = 'force-static'
+
+export function generateStaticParams() {
+  return [{ route: ['graphql'] }]
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
