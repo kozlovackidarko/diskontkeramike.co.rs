@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const COMPANY = {
   name: 'Gile Promet d.o.o.',
   address: 'Bulevar Oslobođenja 23, Beograd',
@@ -63,24 +65,24 @@ export default function Footer() {
                 <ul className="font-inter text-sm xs:text-base space-y-2">
                   {USEFUL_LINKS_LEFT.map((link) => (
                     <li key={link.label} className="py-3">
-                      <a
+                      <Link
                         href={link.href}
                         className="underline hover:opacity-90 transition-opacity py-3"
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
                 <ul className="font-inter text-sm xs:text-base space-y-2">
                   {USEFUL_LINKS_RIGHT.map((link) => (
                     <li key={link.label} className="py-3">
-                      <a
+                      <Link
                         href={link.href}
                         className="underline hover:opacity-90 transition-opacity py-3"
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

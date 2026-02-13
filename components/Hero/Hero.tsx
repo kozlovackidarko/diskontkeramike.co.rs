@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export interface HeroButton {
   label: string
@@ -35,17 +36,20 @@ export default function Hero({ title, subtitle, description, imageSrc, imageAlt,
               </p>
               {buttons.length > 0 && (
                 <div className="flex flex-wrap gap-3 sm:gap-4 mt-6">
-                  {buttons.map((btn) => (
-                    <a
-                      key={btn.label}
-                      href={btn.href}
-                      className={`inline-block text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity ${
-                        btn.variant === 'orange' ? 'bg-orange' : 'bg-blue'
-                      }`}
-                    >
+                  {buttons.map((btn) => {
+                  const className = `inline-block text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity ${
+                    btn.variant === 'orange' ? 'bg-orange' : 'bg-blue'
+                  }`
+                  return btn.href.startsWith('/') ? (
+                    <Link key={btn.label} href={btn.href} className={className}>
+                      {btn.label}
+                    </Link>
+                  ) : (
+                    <a key={btn.label} href={btn.href} className={className}>
                       {btn.label}
                     </a>
-                  ))}
+                  )
+                })}
                 </div>
               )}
             </div>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import Logo from './Logo'
 
 interface NavLink {
@@ -23,52 +24,52 @@ export default function Header() {
     <header className="bg-off-white relative">
       <div className="px-4 sm:px-8 py-3">
         <div className="max-w-[1280px] mx-auto flex items-center justify-between relative">
-          <a href="/" className="flex items-center" aria-label="Početna">
+          <Link href="/" className="flex items-center" aria-label="Početna">
             <Logo />
-          </a>
+          </Link>
 
           <div className="hidden xl:flex items-center">
             <nav className="flex items-center">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="text-black font-inter text-base font-normal hover:text-gray-600 transition-colors px-5 py-2.5"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
             <div className="flex items-center gap-4 ml-4">
-              <a
+              <Link
                 href="/top-ponuda"
                 className="inline-block bg-red text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity"
               >
                 Top ponuda
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/kontakt"
                 className="inline-block bg-blue text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity"
               >
                 Kontakt
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="flex items-center gap-4 xl:hidden relative">
             <div className="hidden xs:flex items-center gap-4">
-              <a
+              <Link
                 href="/top-ponuda"
                 className="inline-block bg-red text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity"
               >
                 Top ponuda
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/kontakt"
-                className="hidden md:block inline-block bg-blue text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity"
+                className="hidden md:inline-block bg-blue text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity"
               >
                 Kontakt
-              </a>
+              </Link>
             </div>
 
             <button
@@ -117,30 +118,30 @@ export default function Header() {
             >
               <nav className="flex flex-col">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.href}
                     href={link.href}
                     className="text-black font-inter text-base font-normal hover:text-gray-600 transition-colors py-4 px-4 whitespace-nowrap"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
                 <div className="md:hidden flex flex-col gap-2 px-4 pb-2">
-                  <a
+                  <Link
                     href="/top-ponuda"
                     className="xs:hidden inline-block bg-red text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity w-full text-center"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Top ponuda
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/kontakt"
                     className="md:hidden inline-block bg-blue text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity w-full text-center"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Kontakt
-                  </a>
+                  </Link>
                 </div>
               </nav>
             </div>
