@@ -1,16 +1,29 @@
 {
   "type": "tile",
   "pictures": [
-    { "src": "images/product-images/baron-beige-20x120.jpg" }
+    {
+      "src": "/images/product-images/baron-beige-20x120.jpg"
+    }
   ],
   "name": "YS Baron Beige",
-  "dimensions": { "width": 20, "height": 120, "thickness": 4 },
+  "dimensions": {
+    "width": 20,
+    "height": 120,
+    "thickness": 4
+  },
   "price": 1699,
   "oldPrice": 1999,
-  "categories": ["Naša preporuka", "Top artikli", "2cm debljina"],
+  "categories": [
+    "Naša preporuka",
+    "Top artikli",
+    "2cm debljina"
+  ],
   "onSale": true,
   "class": "Prva klasa",
   "color": "Braon",
-  "purpose": ["Spoljne", "Podne"],
+  "purpose": [
+    "Spoljne",
+    "Podne"
+  ],
   "manufacturer": "Yurtbay Seramik"
 }
