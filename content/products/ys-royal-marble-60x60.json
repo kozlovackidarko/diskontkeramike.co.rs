@@ -1,0 +1,27 @@
+{
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/royal-marble-60x60.jpg"
+    }
+  ],
+  "name": "YS Royal Marble 60x60",
+  "dimensions": {
+    "width": 60,
+    "height": 60,
+    "thickness": 0
+  },
+  "price": 999,
+  "categories": [
+    "Top artikli",
+    "Najpopularnije"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": "Bela",
+  "purpose": [
+    "Unutrašnje",
+    "Kupatilske"
+  ],
+  "manufacturer": "Yurtbay Seramik"
+}
