@@ -1,0 +1,29 @@
+{
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/pavillion-oak-60x60.jpg"
+    }
+  ],
+  "name": "YS Pavillion Oak",
+  "dimensions": {
+    "width": 60,
+    "height": 60,
+    "thickness": 0
+  },
+  "price": 1899,
+  "oldPrice": 1499,
+  "categories": [
+    "Najpopularnije",
+    "Top ponuda"
+  ],
+  "onSale": true,
+  "class": "Prva klasa",
+  "color": "Bela",
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Podne"
+  ],
+  "manufacturer": "Yurtbay Seramik"
+}
