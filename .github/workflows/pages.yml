@@ -44,7 +44,6 @@ jobs:
 
       - name: Build static site
         env:
-          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
           NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
           TINA_SEARCH_INDEXER_TOKEN: ${{ secrets.TINA_SEARCH_INDEXER_TOKEN }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
