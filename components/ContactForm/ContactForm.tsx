@@ -117,6 +117,7 @@ export default function ContactForm() {
                 Došlo je do greške. Pokušajte ponovo ili nas kontaktirajte direktno.
               </p>
             )}
+            <div className="g-recaptcha" data-sitekey="6LfCUXQsAAAAAB8Av_6C8ppMe4HAQxkmWkmVVoBc" data-action="submit" />
             <button
               type="submit"
               disabled={status === 'sending'}
