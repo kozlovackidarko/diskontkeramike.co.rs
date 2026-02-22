@@ -69,6 +69,7 @@ export default function ProductPopup({ product, onClose }: ProductPopupProps) {
           <span aria-hidden="true">×</span>
         </button>
 
+        <div className="flex min-h-0 flex-1 flex-col overflow-y-auto">
         <div className="relative aspect-square w-full shrink-0 overflow-hidden bg-off-white">
           {pictures.map((src, i) => (
             <div
@@ -116,7 +117,7 @@ export default function ProductPopup({ product, onClose }: ProductPopupProps) {
           )}
         </div>
 
-        <div className="flex flex-1 flex-col gap-4 overflow-y-auto p-6">
+        <div className="flex flex-col gap-4 p-6">
           <h2 id="product-popup-title" className="font-montserrat font-bold text-black text-xl">
             {product.name}
           </h2>
@@ -174,6 +175,7 @@ export default function ProductPopup({ product, onClose }: ProductPopupProps) {
               <dd className="mt-0.5 text-gray">{product.manufacturer}</dd>
             </div>
           </dl>
+        </div>
         </div>
       </div>
     </div>
