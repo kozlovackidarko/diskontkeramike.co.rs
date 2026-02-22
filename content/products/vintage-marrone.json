@@ -1,7 +1,18 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/vintage-marrone-1.jpg"
+    },
+    {
+      "src": "/images/product-images/vintage-marrone-2.jpg"
+    },
+    {
+      "src": "/images/product-images/vintage-marrone-3.jpg"
+    },
+    {}
+  ],
   "name": "Vintage Marrone",
   "dimensions": {
     "width": 20,
