@@ -1,27 +1,32 @@
 {
+  "active": true,
   "type": "tile",
   "pictures": [
     {
       "src": "/images/product-images/marmol-30x60.jpg"
     }
   ],
-  "name": "AG Marmol 30x60",
+  "name": "AC Marmol 30x60",
   "dimensions": {
     "width": 60,
     "height": 30,
     "thickness": 6
   },
-  "price": 1899,
+  "tile_type": "Mermer",
+  "final_polish": "Polirana",
+  "price": 1000,
   "categories": [
     "Najpopularnije",
     "Top artikli"
   ],
   "onSale": false,
-  "class": "Druga klasa",
-  "color": "Bela",
+  "class": "Prva klasa",
+  "color": [
+    "Bela"
+  ],
   "purpose": [
     "Unutrašnje",
     "Zidne"
   ],
-  "manufacturer": "Aglasian Granito"
+  "manufacturer": "Altin Ciniseramik"
 }

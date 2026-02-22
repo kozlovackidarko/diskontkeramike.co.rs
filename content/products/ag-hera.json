@@ -1,28 +1,33 @@
 {
+  "active": true,
   "type": "tile",
   "pictures": [
     {
       "src": "/images/product-images/hera-60x60.jpg"
     }
   ],
-  "name": "AG Hera",
+  "name": "AC Hera Beige",
   "dimensions": {
     "width": 60,
     "height": 60,
     "thickness": 10
   },
-  "price": 797,
-  "oldPrice": 999,
+  "tile_type": "Mermer",
+  "final_polish": "Mat",
+  "price": 1200,
   "categories": [
     "Najpopularnije",
     "Top artikli"
   ],
-  "onSale": true,
-  "class": "Druga klasa",
-  "color": "Bela",
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Bela"
+  ],
   "purpose": [
     "Unutrašnje",
-    "Zidne"
+    "Zidne",
+    "Podne"
   ],
-  "manufacturer": "Aglasian Granito"
+  "manufacturer": "Altin Ciniseramik"
 }

@@ -1,4 +1,5 @@
 {
+  "active": true,
   "type": "tile",
   "pictures": [
     {
@@ -11,16 +12,19 @@
     "height": 120,
     "thickness": 4
   },
-  "price": 1699,
-  "oldPrice": 1999,
+  "tile_type": "Drvo",
+  "final_polish": "Mat",
+  "price": 1500,
   "categories": [
-    "Naša preporuka",
+    "product-options/categories-naa-preporuka",
     "Top artikli",
-    "2cm debljina"
+    "Naša preporuka"
   ],
-  "onSale": true,
+  "onSale": false,
   "class": "Prva klasa",
-  "color": "Braon",
+  "color": [
+    "Braon"
+  ],
   "purpose": [
     "Spoljne",
     "Podne"

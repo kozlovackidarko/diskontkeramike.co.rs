@@ -1,0 +1,28 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [],
+  "name": "Vintage Marrone",
+  "dimensions": {
+    "width": 20,
+    "height": 120,
+    "thickness": 0
+  },
+  "tile_type": "Drvo",
+  "final_polish": "Mat",
+  "price": 2360,
+  "categories": [
+    "Top ponuda"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Bež"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Podne"
+  ],
+  "manufacturer": "Savoia Italia"
+}

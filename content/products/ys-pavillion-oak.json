@@ -1,4 +1,5 @@
 {
+  "active": true,
   "type": "tile",
   "pictures": [
     {
@@ -11,15 +12,23 @@
     "height": 60,
     "thickness": 0
   },
-  "price": 1899,
-  "oldPrice": 1499,
+  "tile_type": "Drvo",
+  "final_polish": "Mat",
+  "price": 1250,
   "categories": [
-    "Najpopularnije",
-    "Top ponuda"
+    "Najpopularnije"
   ],
-  "onSale": true,
+  "onSale": false,
   "class": "Prva klasa",
-  "color": "Bela",
+  "color": [
+    "product-options/color-b",
+    "product-options/color-r",
+    "product-options/color-a",
+    "product-options/color-o",
+    "product-options/color-n",
+    "product-options/color-be",
+    "Braon"
+  ],
   "purpose": [
     "Spoljne",
     "Unutrašnje",

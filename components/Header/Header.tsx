@@ -16,7 +16,7 @@ export default function Header() {
 
   const navLinks: NavLink[] = [
     { label: 'Početna', href: '/' },
-    { label: 'Naša preporuka', href: '/nasa-preporuka' },
+    { label: 'Naša preporuka', href: '/kategorija/nasa-preporuka' },
     { label: 'Partneri', href: '/partneri' },
     { label: 'O nama', href: '/o-nama' },
   ]
@@ -43,7 +43,7 @@ export default function Header() {
             </nav>
             <div className="flex items-center gap-4 ml-4">
               <Link
-                href="/top-ponuda"
+                href="/kategorija/top-ponuda"
                 className="inline-block bg-red text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity"
               >
                 Top ponuda
@@ -60,7 +60,7 @@ export default function Header() {
           <div className="flex items-center gap-4 xl:hidden relative">
             <div className="hidden xs:flex items-center gap-4">
               <Link
-                href="/top-ponuda"
+                href="/kategorija/top-ponuda"
                 className="inline-block bg-red text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity"
               >
                 Top ponuda
@@ -130,7 +130,7 @@ export default function Header() {
                 ))}
                 <div className="md:hidden flex flex-col gap-2 px-4 pb-2">
                   <Link
-                    href="/top-ponuda"
+                    href="/kategorija/top-ponuda"
                     className="xs:hidden inline-block bg-red text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity w-full text-center"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

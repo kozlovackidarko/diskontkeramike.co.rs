@@ -45,7 +45,8 @@ export default function ProductPopup({ product, onClose }: ProductPopupProps) {
   }
 
   const dimensionsStr = `${product.dimensions.width}cm x ${product.dimensions.height}cm`
-  const thicknessStr = `${product.dimensions.thickness}mm`
+  const hasThickness = typeof product.dimensions.thickness === 'number'
+  const thicknessStr = hasThickness ? `${product.dimensions.thickness}mm` : null
 
   return (
     <div
@@ -134,12 +135,24 @@ export default function ProductPopup({ product, onClose }: ProductPopupProps) {
           <dl className="grid gap-3 font-inter text-[15px]">
             <div>
               <dt className="font-semibold text-black">Dimenzije</dt>
-              <dd className="mt-0.5 text-gray">{dimensionsStr} (širina × dužina), debljina {thicknessStr}</dd>
+              <dd className="mt-0.5 text-gray">{dimensionsStr} (širina × dužina){thicknessStr != null ? `, debljina ${thicknessStr}` : ''}</dd>
             </div>
             <div>
               <dt className="font-semibold text-black">Tip</dt>
               <dd className="mt-0.5 text-gray">{product.type.join(', ')}</dd>
             </div>
+            {product.tile_type && (
+              <div>
+                <dt className="font-semibold text-black">Tip plocice</dt>
+                <dd className="mt-0.5 text-gray">{product.tile_type}</dd>
+              </div>
+            )}
+            {product.final_polish && (
+              <div>
+                <dt className="font-semibold text-black">Zavrsna obrada</dt>
+                <dd className="mt-0.5 text-gray">{product.final_polish}</dd>
+              </div>
+            )}
             <div>
               <dt className="font-semibold text-black">Kategorije</dt>
               <dd className="mt-0.5 text-gray">{product.categories.join(', ')}</dd>
@@ -150,7 +163,7 @@ export default function ProductPopup({ product, onClose }: ProductPopupProps) {
             </div>
             <div>
               <dt className="font-semibold text-black">Boja</dt>
-              <dd className="mt-0.5 text-gray">{product.color}</dd>
+              <dd className="mt-0.5 text-gray">{product.color?.length ? product.color.join(', ') : '—'}</dd>
             </div>
             <div>
               <dt className="font-semibold text-black">Namena</dt>

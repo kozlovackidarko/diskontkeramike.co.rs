@@ -36,7 +36,8 @@ function buildActiveTags(filters: FilterState): FilterTag[] {
   if (filters.priceMax != null) tags.push({ id: 'priceMax', label: `do-${filters.priceMax}-dinara` })
   if (filters.width != null) tags.push({ id: 'width', label: `${filters.width}cm-sirine` })
   if (filters.height != null) tags.push({ id: 'height', label: `${filters.height}cm-duzine` })
-  if (filters.thickness != null) tags.push({ id: 'thickness', label: `${filters.thickness}mm-debljina` })
+  filters.tile_types.forEach((t) => tags.push({ id: `tile_type:${t}`, label: slugify(t) }))
+  filters.final_polishes.forEach((f) => tags.push({ id: `final_polish:${f}`, label: slugify(f) }))
   filters.classes.forEach((c) => tags.push({ id: `class:${c}`, label: slugify(c) }))
   filters.colors.forEach((c) => tags.push({ id: `color:${c}`, label: slugify(c) }))
   filters.purposes.forEach((p) => tags.push({ id: `purpose:${p}`, label: slugify(p) }))
@@ -97,7 +98,14 @@ export default function ProductsSection({ products, bg = 'off-white' }: Products
     else if (id === 'priceMax') setFilters((prev) => ({ ...prev, priceMax: null }))
     else if (id === 'width') setFilters((prev) => ({ ...prev, width: null }))
     else if (id === 'height') setFilters((prev) => ({ ...prev, height: null }))
-    else if (id === 'thickness') setFilters((prev) => ({ ...prev, thickness: null }))
+    else if (id.startsWith('tile_type:')) {
+      const t = id.slice('tile_type:'.length)
+      setFilters((prev) => ({ ...prev, tile_types: prev.tile_types.filter((x) => x !== t) }))
+    }
+    else if (id.startsWith('final_polish:')) {
+      const f = id.slice('final_polish:'.length)
+      setFilters((prev) => ({ ...prev, final_polishes: prev.final_polishes.filter((x) => x !== f) }))
+    }
     else if (id.startsWith('class:')) {
       const cls = id.slice('class:'.length)
       setFilters((prev) => ({ ...prev, classes: prev.classes.filter((c) => c !== cls) }))

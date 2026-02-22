@@ -1,4 +1,5 @@
 {
+  "active": true,
   "type": "tile",
   "pictures": [
     {
@@ -11,18 +12,23 @@
     "height": 60,
     "thickness": 8
   },
-  "price": 1599,
-  "oldPrice": 1799,
+  "tile_type": "Mermer",
+  "final_polish": "Polirana",
+  "price": 1100,
   "categories": [
-    "Naša preporuka",
-    "Najpopularnije"
+    "product-options/categories-naa-preporuka",
+    "Najpopularnije",
+    "Naša preporuka"
   ],
-  "onSale": true,
+  "onSale": false,
   "class": "Prva klasa",
-  "color": "Bela",
+  "color": [
+    "Bela",
+    "Siva"
+  ],
   "purpose": [
-    "Spoljne",
-    "Podne"
+    "Kupatilske",
+    "Zidne"
   ],
   "manufacturer": "Yurtbay Seramik"
 }

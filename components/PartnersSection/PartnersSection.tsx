@@ -2,11 +2,11 @@ import Image from 'next/image'
 import { assetUrl } from '@/lib/assetUrl'
 
 const PARTNERS = [
-  { name: 'Cristal Ceramicas', image: '/images/partners-cristal-ceramicas.jpg', href: '#' },
-  { name: 'Yurtbay Seramik', image: '/images/partners-yurtbay-seramik.jpg', href: '#' },
-  { name: 'Savoia Italia', image: '/images/partners-savoia-italia.jpg', href: '#' },
-  { name: 'Castel Vetro', image: '/images/partners-castel-vetro.jpg', href: '#' },
-  { name: 'Aglasian Granito', image: '/images/partners-aglasian-granito.jpg', href: '#' },
+  { name: 'Cristal Ceramicas', image: '/images/partners-cristal-ceramicas.jpg', href: 'https://cristalceramicas.com/en/' },
+  { name: 'Yurtbay Seramik', image: '/images/partners-yurtbay-seramik.jpg', href: 'https://www.yurtbayseramik.com/en' },
+  { name: 'Savoia Italia', image: '/images/partners-savoia-italia.jpg', href: 'https://www.savoiaitalia.com/' },
+  { name: 'Castel Vetro', image: '/images/partners-castel-vetro.jpg', href: 'https://www.castelvetro.it/' },
+  { name: 'Aglasian Granito', image: '/images/partners-aglasian-granito.jpg', href: 'https://aglasiangranito.com/' },
 ]
 
 export default function PartnersSection() {
@@ -23,6 +23,8 @@ export default function PartnersSection() {
                 <a
                   key={partner.name}
                   href={partner.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="relative w-full flex-1 min-w-0 shrink-0 h-[375px] overflow-hidden group block min-h-[240px]"
                 >
                   <div className="absolute inset-0">
@@ -49,6 +51,8 @@ export default function PartnersSection() {
                 <a
                   key={partner.name}
                   href={partner.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="relative w-full flex-1 min-w-0 shrink-0 h-[284px] overflow-hidden group block min-h-[240px]"
                 >
                   <div className="absolute inset-0">

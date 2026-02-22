@@ -1,0 +1,23 @@
+{
+  "categories": [
+    { "slug": "nasa-preporuka", "name": "Naša preporuka" },
+    { "slug": "2cm-debljina", "name": "2cm debljina" },
+    { "slug": "top-ponuda", "name": "Top ponuda" },
+    { "slug": "protivklizna", "name": "Protivklizna (anti-slip)" },
+    { "slug": "najpopularnije", "name": "Najpopularnije" },
+    { "slug": "top-artikli", "name": "Top artikli" }
+  ],
+  "classes": ["Prva klasa", "Druga klasa"],
+  "colors": ["Bela", "Plava", "Siva", "Braon", "Bež"],
+  "purposes": ["Spoljne", "Unutrašnje", "Kupatilske", "Tersane", "Podne", "Zidne", "Bazenska"],
+  "manufacturers": [
+    "Cristal Ceramicas",
+    "Yurtbay Seramik",
+    "Savoia Italia",
+    "Castel Vetro",
+    "Aglasian Granito",
+    "Altin Ciniseramik"
+  ],
+  "tileTypes": ["Mermer", "Beton", "Kamen", "Drvo", "Bazenska"],
+  "finalPolishes": ["Mat", "Sjajna", "Struktura", "Polirana"]
+}

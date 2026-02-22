@@ -1,5 +1,6 @@
 fragment ProductsParts on Products {
   __typename
+  active
   type
   pictures {
     __typename
@@ -12,6 +13,8 @@ fragment ProductsParts on Products {
     height
     thickness
   }
+  tile_type
+  final_polish
   price
   oldPrice
   categories

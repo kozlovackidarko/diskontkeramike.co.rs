@@ -1,28 +1,34 @@
 {
+  "active": true,
   "type": "tile",
   "pictures": [
     {
       "src": "/images/product-images/marmol-48x48.jpg"
     }
   ],
-  "name": "AG Marmol 48x48",
+  "name": "AC Marmol 48x48",
   "dimensions": {
     "width": 48,
     "height": 48,
     "thickness": 8
   },
-  "price": 2499,
+  "tile_type": "Mermer",
+  "final_polish": "Mat",
+  "price": 1050,
   "categories": [
     "Najpopularnije",
     "Top artikli",
+    "product-options/categories-naa-preporuka",
     "Naša preporuka"
   ],
   "onSale": false,
-  "class": "Druga klasa",
-  "color": "Bela",
+  "class": "Prva klasa",
+  "color": [
+    "Bela"
+  ],
   "purpose": [
     "Unutrašnje",
     "Podne"
   ],
-  "manufacturer": "Aglasian Granito"
+  "manufacturer": "Altin Ciniseramik"
 }

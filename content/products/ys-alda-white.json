@@ -3,27 +3,25 @@
   "type": "tile",
   "pictures": [
     {
-      "src": "/images/product-images/royal-marble-60x60.jpg"
+      "src": "/images/product-images/alda-beyaz-40x60.jpg"
     }
   ],
-  "name": "YS Royal Marble 60x60",
+  "name": "YS Alda White",
   "dimensions": {
-    "width": 60,
+    "width": 40,
     "height": 60,
-    "thickness": 0
+    "thickness": 6
   },
-  "tile_type": "Mermer",
-  "final_polish": "Polirana",
-  "price": 1999,
+  "tile_type": "Kamen",
+  "final_polish": "Mat",
+  "price": 1600,
   "categories": [
     "Top artikli",
-    "Najpopularnije",
-    "Top ponuda"
+    "Najpopularnije"
   ],
   "onSale": false,
   "class": "Prva klasa",
   "color": [
-    "Bela",
     "Siva"
   ],
   "purpose": [

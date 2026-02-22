@@ -94,25 +94,33 @@ type ProductsPictures {
 type ProductsDimensions {
   width: Float!
   height: Float!
-  thickness: Float!
+  thickness: Float
 }
 
 type Products implements Node & Document {
+  active: Boolean
   type: String!
   pictures: [ProductsPictures!]!
   name: String!
   dimensions: ProductsDimensions!
+  tile_type: String
+  final_polish: String
   price: Float!
   oldPrice: Float
-  categories: [String!]!
+  categories: [String]
   onSale: Boolean
   class: String!
-  color: String!
+  color: [String!]!
   purpose: [String!]!
   manufacturer: String!
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input BooleanFilter {
+  eq: Boolean
+  exists: Boolean
 }
 
 input StringFilter {
@@ -149,16 +157,14 @@ input ProductsDimensionsFilter {
   thickness: NumberFilter
 }
 
-input BooleanFilter {
-  eq: Boolean
-  exists: Boolean
-}
-
 input ProductsFilter {
+  active: BooleanFilter
   type: StringFilter
   pictures: ProductsPicturesFilter
   name: StringFilter
   dimensions: ProductsDimensionsFilter
+  tile_type: StringFilter
+  final_polish: StringFilter
   price: NumberFilter
   oldPrice: NumberFilter
   categories: StringFilter
@@ -210,16 +216,19 @@ input ProductsDimensionsMutation {
 }
 
 input ProductsMutation {
+  active: Boolean
   type: String
   pictures: [ProductsPicturesMutation]
   name: String
   dimensions: ProductsDimensionsMutation
+  tile_type: String
+  final_polish: String
   price: Float
   oldPrice: Float
   categories: [String]
   onSale: Boolean
   class: String
-  color: String
+  color: [String]
   purpose: [String]
   manufacturer: String
 }

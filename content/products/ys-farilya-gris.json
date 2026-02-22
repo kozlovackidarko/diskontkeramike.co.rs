@@ -1,4 +1,5 @@
 {
+  "active": true,
   "type": "tile",
   "pictures": [
     {
@@ -11,18 +12,24 @@
     "height": 25,
     "thickness": 10
   },
-  "price": 1199,
-  "oldPrice": 1999,
+  "tile_type": "Kamen",
+  "final_polish": "Mat",
+  "price": 1700,
   "categories": [
-    "Naša preporuka",
-    "Najpopularnije"
+    "product-options/categories-naa-preporuka",
+    "Najpopularnije",
+    "Naša preporuka"
   ],
-  "onSale": true,
+  "onSale": false,
   "class": "Prva klasa",
-  "color": "Braon",
+  "color": [
+    "Braon",
+    "Bež"
+  ],
   "purpose": [
     "Spoljne",
-    "Podne"
+    "Podne",
+    "Zidne"
   ],
   "manufacturer": "Yurtbay Seramik"
 }

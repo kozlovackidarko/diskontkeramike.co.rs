@@ -42,6 +42,18 @@ export default function FiltersSidebar({ filters, options, onChange }: FiltersSi
       : [...filters.purposes, purp]
     onChange({ purposes: next })
   }
+  const toggleTileType = (t: string) => {
+    const next = filters.tile_types.includes(t)
+      ? filters.tile_types.filter((x) => x !== t)
+      : [...filters.tile_types, t]
+    onChange({ tile_types: next })
+  }
+  const toggleFinalPolish = (f: string) => {
+    const next = filters.final_polishes.includes(f)
+      ? filters.final_polishes.filter((x) => x !== f)
+      : [...filters.final_polishes, f]
+    onChange({ final_polishes: next })
+  }
 
   const selectBorder = (value: string | number | null) =>
     (value !== '' && value != null) ? 'border-black' : 'border-gray/20'
@@ -111,19 +123,6 @@ export default function FiltersSidebar({ filters, options, onChange }: FiltersSi
                   ))}
                 </select>
               </label>
-              <label className="font-inter text-[15px] text-black">
-                Debljina (mm)
-                <select
-                  value={filters.thickness ?? ''}
-                  onChange={(e) => onChange({ thickness: e.target.value === '' ? null : Number(e.target.value) })}
-                  className={`mt-1 block w-full border bg-white px-3 py-2 font-inter text-[15px] text-black focus:outline-none focus:ring-2 ${selectBorder(filters.thickness ?? '')}`}
-                >
-                  <option value="">Bilo koja</option>
-                  {options.thicknesses.map((t) => (
-                    <option key={t} value={t}>{t}mm</option>
-                  ))}
-                </select>
-              </label>
             </div>
           </fieldset>
         </div>
@@ -155,6 +154,44 @@ export default function FiltersSidebar({ filters, options, onChange }: FiltersSi
           ))}
         </div>
       </fieldset>
+
+      {options.tileTypes.length > 0 && (
+        <fieldset className="space-y-3 min-w-0">
+          <legend className="font-montserrat font-bold text-black text-base">Tip plocice</legend>
+          <div className="flex flex-col gap-2">
+            {options.tileTypes.map((t) => (
+              <label key={t} className="flex items-center gap-2 font-inter text-[15px] text-black cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={filters.tile_types.includes(t)}
+                  onChange={() => toggleTileType(t)}
+                  className="h-4 w-4 border-gray accent-black-check"
+                />
+                {t}
+              </label>
+            ))}
+          </div>
+        </fieldset>
+      )}
+
+      {options.finalPolishes.length > 0 && (
+        <fieldset className="space-y-3 min-w-0">
+          <legend className="font-montserrat font-bold text-black text-base">Zavrsna obrada</legend>
+          <div className="flex flex-col gap-2">
+            {options.finalPolishes.map((f) => (
+              <label key={f} className="flex items-center gap-2 font-inter text-[15px] text-black cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={filters.final_polishes.includes(f)}
+                  onChange={() => toggleFinalPolish(f)}
+                  className="h-4 w-4 border-gray accent-black-check"
+                />
+                {f}
+              </label>
+            ))}
+          </div>
+        </fieldset>
+      )}
 
       <fieldset className="space-y-3 min-w-0">
         <legend className="font-montserrat font-bold text-black text-base">Klasa</legend>

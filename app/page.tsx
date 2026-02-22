@@ -8,6 +8,7 @@ import Footer from '@/components/Footer/Footer'
 import {
   mapContentProductsToProducts,
   normalizeProducts,
+  filterActiveProducts,
   type Product,
 } from '@/lib/products'
 import { client } from '@/tina/__generated__/client'
@@ -17,7 +18,8 @@ async function getProducts(): Promise<Product[]> {
     const result = await client.queries.productsConnection({ first: 500 })
     const edges = result?.data?.productsConnection?.edges ?? []
     const nodes = edges.map((e) => e?.node).filter(Boolean) as Parameters<typeof mapContentProductsToProducts>[0]
-    const mapped = mapContentProductsToProducts(nodes)
+    const activeNodes = filterActiveProducts(nodes)
+    const mapped = mapContentProductsToProducts(activeNodes)
     return normalizeProducts(mapped)
   } catch {
     return []
@@ -32,7 +34,7 @@ const HOME_HERO = {
   imageAlt: 'Ceramic tiles',
   buttons: [
     { label: 'Cela ponuda', href: '/svi-proizvodi', variant: 'blue' as const },
-    { label: 'Top artikli', href: '/top-artikli', variant: 'orange' as const },
+    { label: 'Naša preporuka', href: '/kategorija/nasa-preporuka', variant: 'orange' as const },
   ],
 }
 

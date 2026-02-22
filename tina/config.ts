@@ -1,4 +1,5 @@
 import { defineConfig } from 'tinacms'
+import optionsData from '../data/product-options.json'
 
 const branch =
   process.env.GITHUB_BRANCH ||
@@ -6,40 +7,28 @@ const branch =
   process.env.HEAD ||
   'main'
 
-const CATEGORIES = [
-  'Top artikli',
-  'Naša preporuka',
-  'Najpopularnije',
-  '2cm debljina',
-  'Oprema za kupatilo',
-  'Top ponuda',
-] as const
+const options = optionsData as {
+  categories: Array<{ slug: string; name: string }>
+  classes: string[]
+  colors: string[]
+  purposes: string[]
+  manufacturers: string[]
+  tileTypes: string[]
+  finalPolishes: string[]
+}
 
-const CLASS_OPTIONS = ['Prva klasa', 'Druga klasa'] as const
-const COLOR_OPTIONS = ['Bela', 'Plava', 'Siva', 'Braon'] as const
-const PURPOSE_OPTIONS = [
-  'Spoljne',
-  'Unutrašnje',
-  'Kupatilske',
-  'Tersane',
-  'Podne',
-  'Zidne',
-] as const
-const MANUFACTURER_OPTIONS = [
-  'Cristal Ceramicas',
-  'Yurtbay Seramik',
-  'Savoia Italia',
-  'Castel Vetro',
-  'Aglasian Granito',
-] as const
+const CATEGORY_OPTIONS = options.categories.map((c) => ({ label: c.name, value: c.name }))
+const CLASS_OPTIONS = options.classes.map((c) => ({ label: c, value: c }))
+const COLOR_OPTIONS = options.colors.map((c) => ({ label: c, value: c }))
+const PURPOSE_OPTIONS = options.purposes.map((p) => ({ label: p, value: p }))
+const MANUFACTURER_OPTIONS = options.manufacturers.map((m) => ({ label: m, value: m }))
+const TILE_TYPE_OPTIONS = options.tileTypes.map((t) => ({ label: t, value: t }))
+const FINAL_POLISH_OPTIONS = options.finalPolishes.map((f) => ({ label: f, value: f }))
 
 const PRODUCT_TYPE_OPTIONS = [
   { label: 'Tile', value: 'tile' },
   { label: 'Additional product', value: 'additional_product' },
 ] as const
-
-const CATEGORY_OPTIONS = CATEGORIES.map((c) => ({ label: c, value: c }))
-const PURPOSE_OPTION_ITEMS = PURPOSE_OPTIONS.map((p) => ({ label: p, value: p }))
 
 function slugify(name: string): string {
   return name
@@ -78,9 +67,7 @@ export default defineConfig({
         name: 'products',
         path: 'content/products',
         format: 'json',
-        match: {
-          include: '*',
-        },
+        match: { include: '*' },
         ui: {
           filename: {
             slugify: (values) => slugify((values?.name as string) ?? 'product') || 'product',
@@ -89,123 +76,142 @@ export default defineConfig({
         defaultItem: () => ({
           type: 'tile',
           name: 'New product',
+          active: true,
           pictures: [],
-          dimensions: { width: 0, height: 0, thickness: 0 },
+          dimensions: { width: 0, height: 0 },
           price: 0,
           categories: [],
           onSale: false,
-          class: 'Prva klasa',
-          color: 'Bela',
+          class: options.classes[0] ?? 'Prva klasa',
+          color: [],
           purpose: [],
-          manufacturer: 'Yurtbay Seramik',
+          manufacturer: options.manufacturers[0] ?? 'Yurtbay Seramik',
         }),
         fields: [
           {
+            type: 'boolean',
+            name: 'active',
+            label: 'Aktivan proizvod',
+            ui: {
+              component: 'toggle',
+              description: 'Prikazan na sajtu ako je ukljuceno.',
+            },
+          },
+          {
             type: 'string',
             name: 'type',
-            label: 'Type',
+            label: 'Tip proizvoda',
             required: true,
             options: [...PRODUCT_TYPE_OPTIONS],
             ui: {
               component: 'select',
-              description: 'Product type: Tile or Additional product',
+              description: 'Tip proizvoda: Plocica ili Dodatni proizvod',
             },
           },
           {
             type: 'object',
             name: 'pictures',
-            label: 'Pictures',
+            label: 'Slike proizvoda',
             list: true,
             required: true,
             fields: [
-              {
-                type: 'image',
-                name: 'src',
-                label: 'Image',
-                required: true,
-              },
+              { type: 'image', name: 'src', label: 'Slika', required: true },
             ],
-            ui: {
-              itemProps: () => ({ label: 'Image' }),
-            },
+            ui: { itemProps: () => ({ label: 'Slika' }) },
           },
           {
             type: 'string',
             name: 'name',
-            label: 'Name',
+            label: 'Ime proizvoda',
             required: true,
             isTitle: true,
           },
           {
             type: 'object',
             name: 'dimensions',
-            label: 'Dimensions',
+            label: 'Dimenzije',
             required: true,
             fields: [
-              { type: 'number', name: 'width', label: 'Width', required: true },
-              { type: 'number', name: 'height', label: 'Height', required: true },
-              { type: 'number', name: 'thickness', label: 'Thickness', required: true },
+              { type: 'number', name: 'width', label: 'Širina', required: true },
+              { type: 'number', name: 'height', label: 'Dužina', required: true },
+              {
+                type: 'number',
+                name: 'thickness',
+                label: 'Debljina',
+                required: false,
+                ui: { description: 'Samo za dodatne proizvode; izostavite za plocice.' },
+              },
             ],
+          },
+          {
+            type: 'string',
+            name: 'tile_type',
+            label: 'Tip plocice',
+            options: [...TILE_TYPE_OPTIONS],
+            ui: { component: 'select', description: 'Samo za plocice.' },
+          },
+          {
+            type: 'string',
+            name: 'final_polish',
+            label: 'Zavrsna obrada',
+            options: [...FINAL_POLISH_OPTIONS],
+            ui: { component: 'select', description: 'Samo za plocice.' },
           },
           {
             type: 'number',
             name: 'price',
-            label: 'Price',
+            label: 'Cena',
             required: true,
           },
           {
             type: 'number',
             name: 'oldPrice',
-            label: 'Old price (when on sale)',
+            label: 'Stara cena (kada je na popustu)',
           },
           {
             type: 'string',
             name: 'categories',
-            label: 'Categories',
+            label: 'Kategorija',
             list: true,
-            required: true,
-            options: CATEGORY_OPTIONS,
-            ui: {
-              description: 'Select one or more categories',
-            },
+            required: false,
+            options: [...CATEGORY_OPTIONS],
+            ui: { description: 'Izaberi nijednu, jednu ili više kategorija' },
           },
           {
             type: 'boolean',
             name: 'onSale',
             label: 'On sale',
-            ui: {
-              component: 'toggle',
-            },
+            ui: { component: 'toggle' },
           },
           {
             type: 'string',
             name: 'class',
-            label: 'Class',
+            label: 'Klasa',
             required: true,
             options: [...CLASS_OPTIONS],
           },
           {
             type: 'string',
             name: 'color',
-            label: 'Color',
+            label: 'Boja',
+            list: true,
             required: true,
             options: [...COLOR_OPTIONS],
+            ui: { description: 'Izaberi jednu ili više boja' },
           },
           {
             type: 'string',
             name: 'purpose',
-            label: 'Purpose',
+            label: 'Namena',
             list: true,
             required: true,
-            options: PURPOSE_OPTION_ITEMS,
-            ui: {
-              description: 'Select one or more purposes',
-            },
+            options: [...PURPOSE_OPTIONS],
+            ui: { description: 'Izaberi jednu ili više namena' },
           },
           {
             type: 'string',
             name: 'manufacturer',
-            label: 'Manufacturer',
+            label: 'Proizvođač',
             required: true,
             options: [...MANUFACTURER_OPTIONS],
           },

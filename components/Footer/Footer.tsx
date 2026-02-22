@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { getCategoryLinks } from '@/lib/product-options'
 
 const COMPANY = {
   name: 'Gile Promet d.o.o.',
@@ -10,18 +11,14 @@ const COMPANY = {
 }
 
 const USEFUL_LINKS_LEFT = [
-  { label: 'Naša preporuka', href: '/nasa-preporuka' },
   { label: 'Partneri', href: '/partneri' },
   { label: 'O nama', href: '/o-nama' },
+  { label: 'Svi proizvodi', href: '/svi-proizvodi' },
+  { label: 'Naša preporuka', href: '/kategorija/nasa-preporuka' },
   { label: 'Kontaktirajte nas', href: '/kontakt' },
 ]
 
-const USEFUL_LINKS_RIGHT = [
-  { label: 'Svi proizvodi', href: '/svi-proizvodi' },
-  { label: 'Top ponuda', href: '/top-ponuda' },
-  { label: 'Top artikli', href: '/top-artikli' },
-  { label: 'Najpopularnije', href: '/najpopularnije' },
-]
+const USEFUL_LINKS_RIGHT = getCategoryLinks().filter((link) => link.label !== 'Naša preporuka')
 
 export default function Footer() {
   return (
@@ -35,7 +32,7 @@ export default function Footer() {
               </h3>
               <ul className="font-inter text-sm xs:text-base leading-relaxed space-y-4">
                 <li>Ime: <span className="font-semibold">{COMPANY.name}</span></li>
-                <li>Adresa: <span className="font-semibold">{COMPANY.address}</span></li>
+                {/* <li>Adresa: <span className="font-semibold">{COMPANY.address}</span></li> */}
                 <li>PIB: <span className="font-semibold">{COMPANY.pib}</span></li>
                 <li>
                   Kontakt telefon:{' '}
