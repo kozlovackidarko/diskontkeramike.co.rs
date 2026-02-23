@@ -6,10 +6,11 @@
       "src": "/images/product-images/Alaska sand.jpg"
     }
   ],
-  "name": "Alasca send",
+  "name": "Alasca sand",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 60,
+    "height": 120,
+    "thickness": 10
   },
   "price": 0,
   "categories": [],
