@@ -2,11 +2,11 @@ import Image from 'next/image'
 import { assetUrl } from '@/lib/assetUrl'
 
 const PARTNERS = [
-  { name: 'Cristal Ceramicas', image: '/images/partners-cristal-ceramicas.jpg', href: 'https://cristalceramicas.com/en/' },
+  { name: 'Crystal Ceramicas', image: '/images/partners-cristal-ceramicas.jpg', href: 'https://cristalceramicas.com/en/' },
   { name: 'Yurtbay Seramik', image: '/images/partners-yurtbay-seramik.jpg', href: 'https://www.yurtbayseramik.com/en' },
   { name: 'Savoia Italia', image: '/images/partners-savoia-italia.jpg', href: 'https://www.savoiaitalia.com/' },
-  { name: 'Castel Vetro', image: '/images/partners-castel-vetro.jpg', href: 'https://www.castelvetro.it/' },
-  { name: 'Aglasian Granito', image: '/images/partners-aglasian-granito.jpg', href: 'https://aglasiangranito.com/' },
+  { name: 'Castelvetro', image: '/images/partners-castel-vetro.jpg', href: 'https://www.castelvetro.it/' },
+  { name: 'AGL Asian Granito', image: '/images/partners-aglasian-granito.jpg', href: 'https://aglasiangranito.com/' },
 ]
 
 export default function PartnersSection() {

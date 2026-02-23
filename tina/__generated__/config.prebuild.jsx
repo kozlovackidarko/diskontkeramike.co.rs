@@ -13,17 +13,17 @@ var product_options_default = {
   ],
   classes: ["Prva klasa", "Druga klasa"],
   colors: ["Bela", "Plava", "Siva", "Braon", "Be\u017E"],
-  purposes: ["Spoljne", "Unutra\u0161nje", "Kupatilske", "Tersane", "Podne", "Zidne", "Bazenska"],
+  purposes: ["Spoljne", "Unutra\u0161nje", "Kupatilske", "Tersane", "Podne", "Zidne", "Bazen"],
   manufacturers: [
-    "Cristal Ceramicas",
+    "Crystal Ceramicas",
     "Yurtbay Seramik",
     "Savoia Italia",
-    "Castel Vetro",
-    "Aglasian Granito",
+    "Castelvetro",
+    "AGL Asian Granito",
     "Altin Ciniseramik"
   ],
-  tileTypes: ["Mermer", "Beton", "Kamen", "Drvo", "Bazenska"],
-  finalPolishes: ["Mat", "Sjajna", "Struktura", "Polirana"]
+  tileTypes: ["Mermer", "Beton", "Kamen", "Drvo", "Bazen"],
+  finalPolishes: ["Mat", "Sjajna", "Struktura", "Polirana", "Protivklizna"]
 };
 
 // tina/config.ts

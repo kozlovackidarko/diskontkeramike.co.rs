@@ -34,8 +34,7 @@ function buildActiveTags(filters: FilterState): FilterTag[] {
   filters.categories.forEach((c) => tags.push({ id: `category:${c}`, label: slugify(c) }))
   if (filters.priceMin != null) tags.push({ id: 'priceMin', label: `od-${filters.priceMin}-dinara` })
   if (filters.priceMax != null) tags.push({ id: 'priceMax', label: `do-${filters.priceMax}-dinara` })
-  if (filters.width != null) tags.push({ id: 'width', label: `${filters.width}cm-sirine` })
-  if (filters.height != null) tags.push({ id: 'height', label: `${filters.height}cm-duzine` })
+  filters.dimensions.forEach((d) => tags.push({ id: `dimension:${d}`, label: d }))
   filters.tile_types.forEach((t) => tags.push({ id: `tile_type:${t}`, label: slugify(t) }))
   filters.final_polishes.forEach((f) => tags.push({ id: `final_polish:${f}`, label: slugify(f) }))
   filters.classes.forEach((c) => tags.push({ id: `class:${c}`, label: slugify(c) }))
@@ -96,8 +95,10 @@ export default function ProductsSection({ products, bg = 'off-white' }: Products
     }
     if (id === 'priceMin') setFilters((prev) => ({ ...prev, priceMin: null }))
     else if (id === 'priceMax') setFilters((prev) => ({ ...prev, priceMax: null }))
-    else if (id === 'width') setFilters((prev) => ({ ...prev, width: null }))
-    else if (id === 'height') setFilters((prev) => ({ ...prev, height: null }))
+    else if (id.startsWith('dimension:')) {
+      const pairing = id.slice('dimension:'.length)
+      setFilters((prev) => ({ ...prev, dimensions: prev.dimensions.filter((d) => d !== pairing) }))
+    }
     else if (id.startsWith('tile_type:')) {
       const t = id.slice('tile_type:'.length)
       setFilters((prev) => ({ ...prev, tile_types: prev.tile_types.filter((x) => x !== t) }))
@@ -133,6 +134,7 @@ export default function ProductsSection({ products, bg = 'off-white' }: Products
               filters={filters}
               options={filterOptions}
               onChange={handleFiltersChange}
+              sectionBg={bg}
             />
 
             <div className="flex-1 min-w-0">
