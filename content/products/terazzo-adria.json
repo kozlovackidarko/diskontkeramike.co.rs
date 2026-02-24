@@ -8,8 +8,9 @@
   ],
   "name": "Terazzo adria",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 59,
+    "height": 59,
+    "thickness": 10
   },
   "tile_type": "Beton",
   "price": 1300,
