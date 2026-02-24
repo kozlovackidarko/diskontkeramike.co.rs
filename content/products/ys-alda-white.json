@@ -16,18 +16,19 @@
   "final_polish": "Mat",
   "price": 1600,
   "categories": [
-    "Top artikli",
-    "Najpopularnije"
+    "Naša preporuka"
   ],
   "onSale": false,
   "class": "Prva klasa",
   "color": [
-    "Siva"
+    "Siva",
+    "Bela"
   ],
   "purpose": [
     "Unutrašnje",
     "Spoljne",
-    "Podne"
+    "Podne",
+    "Tersane"
   ],
   "manufacturer": "Yurtbay Seramik"
 }
