@@ -1,0 +1,27 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {}
+  ],
+  "name": "Soho nero",
+  "dimensions": {
+    "width": 25,
+    "height": 37,
+    "thickness": 8
+  },
+  "tile_type": "Beton",
+  "final_polish": "Mat",
+  "price": 400,
+  "categories": [
+    "Top ponuda"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [],
+  "purpose": [
+    "Kupatilske",
+    "Zidne"
+  ],
+  "manufacturer": "Crystal Ceramicas"
+}
