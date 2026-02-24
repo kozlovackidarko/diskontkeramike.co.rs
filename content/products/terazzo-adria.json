@@ -13,6 +13,7 @@
     "thickness": 10
   },
   "tile_type": "Beton",
+  "final_polish": "Mat",
   "price": 1300,
   "categories": [
     "Naša preporuka"
