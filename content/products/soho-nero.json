@@ -2,7 +2,9 @@
   "active": true,
   "type": "tile",
   "pictures": [
-    {}
+    {
+      "src": "/images/product-images/Soho nero.jpg"
+    }
   ],
   "name": "Soho nero",
   "dimensions": {
