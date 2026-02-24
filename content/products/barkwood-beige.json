@@ -1,0 +1,18 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [],
+  "name": "Barkwood beige ",
+  "dimensions": {
+    "width": 15,
+    "height": 90,
+    "thickness": 9.5
+  },
+  "price": 0,
+  "categories": [],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [],
+  "purpose": [],
+  "manufacturer": "Crystal Ceramicas"
+}
