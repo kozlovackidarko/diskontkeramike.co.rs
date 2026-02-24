@@ -12,11 +12,22 @@
     "height": 80,
     "thickness": 10
   },
-  "price": 0,
-  "categories": [],
+  "tile_type": "Beton",
+  "final_polish": "Mat",
+  "price": 1800,
+  "categories": [
+    "Top ponuda"
+  ],
   "onSale": false,
   "class": "Prva klasa",
-  "color": [],
-  "purpose": [],
-  "manufacturer": "Crystal Ceramicas"
+  "color": [
+    "Siva"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Tersane",
+    "Podne"
+  ],
+  "manufacturer": "Yurtbay Seramik"
 }
