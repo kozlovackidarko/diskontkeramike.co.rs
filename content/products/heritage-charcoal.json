@@ -1,0 +1,18 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [],
+  "name": "Heritage charcoal",
+  "dimensions": {
+    "width": 90,
+    "height": 90,
+    "thickness": 10
+  },
+  "price": 0,
+  "categories": [],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [],
+  "purpose": [],
+  "manufacturer": "Crystal Ceramicas"
+}
