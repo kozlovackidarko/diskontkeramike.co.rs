@@ -1,0 +1,33 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/terazzo adria.jpg"
+    }
+  ],
+  "name": "Terazzo adria",
+  "dimensions": {
+    "width": 0,
+    "height": 0
+  },
+  "tile_type": "Beton",
+  "price": 1300,
+  "categories": [
+    "Naša preporuka"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Bela",
+    "Bež",
+    "Siva"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Tersane",
+    "Podne"
+  ],
+  "manufacturer": "Crystal Ceramicas"
+}
