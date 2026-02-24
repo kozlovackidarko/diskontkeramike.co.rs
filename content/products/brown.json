@@ -8,8 +8,9 @@
   ],
   "name": "Brown",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 10,
+    "height": 30,
+    "thickness": 9
   },
   "tile_type": "Beton",
   "final_polish": "Mat",
