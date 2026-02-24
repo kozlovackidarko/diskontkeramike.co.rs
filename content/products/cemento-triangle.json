@@ -8,8 +8,9 @@
   ],
   "name": "Cemento triangle",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 30,
+    "height": 60,
+    "thickness": 0.9
   },
   "price": 0,
   "categories": [],
