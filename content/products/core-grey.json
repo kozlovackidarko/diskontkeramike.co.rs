@@ -1,7 +1,11 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/CORE grey.jpg"
+    }
+  ],
   "name": "Core grey",
   "dimensions": {
     "width": 80,
