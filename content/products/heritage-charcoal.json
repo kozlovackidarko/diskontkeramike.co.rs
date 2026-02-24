@@ -1,7 +1,11 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/Heritage%20charcoal.jpg"
+    }
+  ],
   "name": "Heritage charcoal",
   "dimensions": {
     "width": 90,
