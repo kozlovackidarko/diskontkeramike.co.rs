@@ -12,11 +12,23 @@
     "height": 60,
     "thickness": 0.9
   },
-  "price": 0,
-  "categories": [],
+  "tile_type": "Mermer",
+  "final_polish": "Mat",
+  "price": 950,
+  "categories": [
+    "Top ponuda"
+  ],
   "onSale": false,
   "class": "Prva klasa",
-  "color": [],
-  "purpose": [],
+  "color": [
+    "Bela",
+    "Siva"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Tersane",
+    "Podne"
+  ],
   "manufacturer": "Crystal Ceramicas"
 }
