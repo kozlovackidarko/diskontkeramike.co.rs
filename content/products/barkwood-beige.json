@@ -1,7 +1,11 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/barkwood beige.jpg"
+    }
+  ],
   "name": "Barkwood beige ",
   "dimensions": {
     "width": 15,
