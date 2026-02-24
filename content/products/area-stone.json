@@ -8,8 +8,9 @@
   ],
   "name": "Area stone",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 25,
+    "height": 25,
+    "thickness": 10
   },
   "tile_type": "Kamen",
   "price": 999,
