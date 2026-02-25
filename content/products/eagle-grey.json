@@ -1,0 +1,28 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [],
+  "name": "Eagle grey",
+  "dimensions": {
+    "width": 59,
+    "height": 59,
+    "thickness": 10
+  },
+  "tile_type": "Beton",
+  "price": 1300,
+  "categories": [
+    "Naša preporuka"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Siva"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Tersane",
+    "Podne"
+  ],
+  "manufacturer": "Crystal Ceramicas"
+}
