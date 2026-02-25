@@ -1,0 +1,30 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/20260224_140409.jpg"
+    }
+  ],
+  "name": "Viola",
+  "dimensions": {
+    "width": 0,
+    "height": 0
+  },
+  "tile_type": "Beton",
+  "final_polish": "Mat",
+  "price": 350,
+  "categories": [
+    "Top ponuda"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [],
+  "purpose": [
+    "Podne",
+    "Unutrašnje",
+    "Spoljne",
+    "Tersane"
+  ],
+  "manufacturer": "Crystal Ceramicas"
+}
