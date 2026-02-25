@@ -1,0 +1,32 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/20260224_134724.jpg"
+    }
+  ],
+  "name": "Cemeto patern smoke",
+  "dimensions": {
+    "width": 0,
+    "height": 0
+  },
+  "tile_type": "Beton",
+  "final_polish": "Mat",
+  "price": 999,
+  "categories": [
+    "Naša preporuka"
+  ],
+  "onSale": false,
+  "class": "Druga klasa",
+  "color": [
+    "Siva"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Podne",
+    "Tersane"
+  ],
+  "manufacturer": "Crystal Ceramicas"
+}
