@@ -1,0 +1,28 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/20260224_135819 (1).jpg"
+    }
+  ],
+  "name": "Ambient amarante",
+  "dimensions": {
+    "width": 0,
+    "height": 0
+  },
+  "tile_type": "Beton",
+  "final_polish": "Mat",
+  "price": 799,
+  "categories": [
+    "Naša preporuka"
+  ],
+  "onSale": false,
+  "class": "Druga klasa",
+  "color": [],
+  "purpose": [
+    "Zidne",
+    "Kupatilske"
+  ],
+  "manufacturer": "Crystal Ceramicas"
+}
