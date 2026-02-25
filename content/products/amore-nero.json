@@ -1,0 +1,27 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/20260224_135739.jpg"
+    }
+  ],
+  "name": "Amore nero",
+  "dimensions": {
+    "width": 0,
+    "height": 0
+  },
+  "tile_type": "Mermer",
+  "price": 450,
+  "categories": [
+    "Top ponuda"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [],
+  "purpose": [
+    "Zidne",
+    "Kupatilske"
+  ],
+  "manufacturer": "Crystal Ceramicas"
+}
