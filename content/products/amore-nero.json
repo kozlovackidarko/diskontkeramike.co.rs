@@ -8,10 +8,12 @@
   ],
   "name": "Amore nero",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 25,
+    "height": 37,
+    "thickness": 0.8
   },
   "tile_type": "Mermer",
+  "final_polish": "Sjajna",
   "price": 450,
   "categories": [
     "Top ponuda"
