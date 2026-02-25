@@ -1,0 +1,30 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/20260224_135502.jpg"
+    }
+  ],
+  "name": "Lana arancio",
+  "dimensions": {
+    "width": 0,
+    "height": 0
+  },
+  "tile_type": "Beton",
+  "final_polish": "Mat",
+  "price": 500,
+  "categories": [
+    "Top ponuda"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Bež"
+  ],
+  "purpose": [
+    "Kupatilske",
+    "Zidne"
+  ],
+  "manufacturer": "Crystal Ceramicas"
+}
