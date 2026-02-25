@@ -1,7 +1,11 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/eagle grey.jpg"
+    }
+  ],
   "name": "Eagle grey",
   "dimensions": {
     "width": 59,
