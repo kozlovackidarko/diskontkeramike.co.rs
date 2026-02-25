@@ -1,0 +1,26 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [],
+  "name": "Cacao 10x10",
+  "dimensions": {
+    "width": 10,
+    "height": 10,
+    "thickness": 0.9
+  },
+  "tile_type": "Beton",
+  "price": 350,
+  "categories": [
+    "Top ponuda"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Braon"
+  ],
+  "purpose": [
+    "Zidne",
+    "Kupatilske"
+  ],
+  "manufacturer": "Crystal Ceramicas"
+}
