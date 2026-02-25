@@ -1,7 +1,11 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/10x10.jpg"
+    }
+  ],
   "name": "Cacao 10x10",
   "dimensions": {
     "width": 10,
