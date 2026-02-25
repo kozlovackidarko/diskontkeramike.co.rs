@@ -8,8 +8,9 @@
   ],
   "name": "Lana arancio",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 25,
+    "height": 37,
+    "thickness": 0.8
   },
   "tile_type": "Beton",
   "final_polish": "Mat",
