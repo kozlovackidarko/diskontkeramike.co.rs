@@ -8,8 +8,9 @@
   ],
   "name": "Ambient amarante",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 20,
+    "height": 60,
+    "thickness": 0.8
   },
   "tile_type": "Beton",
   "final_polish": "Mat",
