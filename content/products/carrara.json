@@ -1,0 +1,33 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/Carrara.jpg"
+    }
+  ],
+  "name": "Carrara",
+  "dimensions": {
+    "width": 0,
+    "height": 0
+  },
+  "tile_type": "Mermer",
+  "final_polish": "Mat",
+  "price": 1300,
+  "categories": [
+    "Naša preporuka"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Siva",
+    "Bela"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Tersane",
+    "Podne"
+  ],
+  "manufacturer": "Crystal Ceramicas"
+}
