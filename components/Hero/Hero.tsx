@@ -38,8 +38,9 @@ export default function Hero({ title, subtitle, description, imageSrc, imageAlt,
               {buttons.length > 0 && (
                 <div className="flex flex-wrap gap-3 sm:gap-4 mt-6">
                   {buttons.map((btn) => {
-                  const className = `inline-block text-white px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity ${
-                    btn.variant === 'orange' ? 'bg-orange' : 'bg-blue'
+                  const isOrange = btn.variant === 'orange'
+                  const className = `inline-block px-6 py-2.5 font-inter text-base font-semibold hover:opacity-90 transition-opacity ${
+                    isOrange ? 'bg-orange text-white animate-glow-pulse' : 'bg-blue text-white'
                   }`
                   return btn.href.startsWith('/') ? (
                     <Link key={btn.label} href={btn.href} className={className}>

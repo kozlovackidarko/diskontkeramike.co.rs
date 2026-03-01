@@ -11,6 +11,7 @@ interface FiltersSidebarProps {
 }
 
 const INITIAL_VISIBLE = 3
+const INITIAL_VISIBLE_DIMENSIONS = 12
 type CheckboxFilterKey = 'categories' | 'tileTypes' | 'finalPolishes' | 'classes' | 'colors' | 'purposes' | 'manufacturers'
 
 const gradientFromClass = { white: 'from-white', 'off-white': 'from-off-white' } as const
@@ -18,6 +19,7 @@ const gradientFromClass = { white: 'from-white', 'off-white': 'from-off-white' }
 export default function FiltersSidebar({ filters, options, onChange, sectionBg = 'off-white' }: FiltersSidebarProps) {
   const fadeFrom = gradientFromClass[sectionBg]
   const [moreFiltersOpen, setMoreFiltersOpen] = useState(false)
+  const [expandedDimensions, setExpandedDimensions] = useState(false)
   const [expandedFilters, setExpandedFilters] = useState<Record<CheckboxFilterKey, boolean>>({
     categories: false,
     tileTypes: false,
@@ -122,27 +124,49 @@ export default function FiltersSidebar({ filters, options, onChange, sectionBg =
           </fieldset>
           <fieldset className="min-w-0 flex-1 space-y-3 lg:flex-none">
             <legend className="font-montserrat font-bold text-black text-base">Dimenzije</legend>
-            <div className="grid grid-cols-2 gap-2">
-              {options.dimensionPairings.map((pairing) => {
-                const checked = filters.dimensions.includes(pairing)
-                const [w, h] = pairing.split('x')
-                const displayLabel = `${w}×${h}`
-                return (
-                  <label
-                    key={pairing}
-                    className={`flex cursor-pointer items-center justify-center rounded border-2 px-3 py-2.5 font-inter text-[15px] font-medium text-black transition-colors hover:border-gray has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-black has-[:focus-visible]:ring-offset-1 ${checked ? 'border-black bg-off-white' : 'border-gray/30 bg-white'}`}
+            <div className="relative">
+              <div className={`grid grid-cols-2 gap-2 ${options.dimensionPairings.length > INITIAL_VISIBLE_DIMENSIONS && !expandedDimensions ? 'overflow-hidden' : ''}`} style={options.dimensionPairings.length > INITIAL_VISIBLE_DIMENSIONS && !expandedDimensions ? { height: 'calc(6 * (2.5rem + 0.5rem))' } : undefined}>
+                {(expandedDimensions ? options.dimensionPairings : options.dimensionPairings.slice(0, INITIAL_VISIBLE_DIMENSIONS)).map((pairing) => {
+                  const checked = filters.dimensions.includes(pairing)
+                  const [w, h] = pairing.split('x')
+                  const displayLabel = `${w}×${h}`
+                  return (
+                    <label
+                      key={pairing}
+                      className={`flex cursor-pointer items-center justify-center rounded border-2 px-3 py-2.5 font-inter text-[15px] font-medium text-black transition-colors hover:border-gray has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-black has-[:focus-visible]:ring-offset-1 ${checked ? 'border-black bg-off-white' : 'border-gray/30 bg-white'}`}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={checked}
+                        onChange={() => toggleDimension(pairing)}
+                        className="sr-only"
+                        aria-label={`Dimenzije ${displayLabel} cm`}
+                      />
+                      <span aria-hidden="true">{displayLabel}</span>
+                    </label>
+                  )
+                })}
+              </div>
+              {options.dimensionPairings.length > INITIAL_VISIBLE_DIMENSIONS && !expandedDimensions && (
+                <div className={`absolute bottom-0 left-0 right-0 pt-6 bg-gradient-to-t ${fadeFrom} to-transparent`}>
+                  <button
+                    type="button"
+                    onClick={() => setExpandedDimensions(true)}
+                    className="font-inter text-[14px] text-black underline hover:no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-1 rounded"
                   >
-                    <input
-                      type="checkbox"
-                      checked={checked}
-                      onChange={() => toggleDimension(pairing)}
-                      className="sr-only"
-                      aria-label={`Dimenzije ${displayLabel} cm`}
-                    />
-                    <span aria-hidden="true">{displayLabel}</span>
-                  </label>
-                )
-              })}
+                    Prikaži sve
+                  </button>
+                </div>
+              )}
+              {options.dimensionPairings.length > INITIAL_VISIBLE_DIMENSIONS && expandedDimensions && (
+                <button
+                  type="button"
+                  onClick={() => setExpandedDimensions(false)}
+                  className="mt-2 font-inter text-[14px] text-black underline hover:no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-1 rounded"
+                >
+                  Prikaži manje
+                </button>
+              )}
             </div>
           </fieldset>
         </div>

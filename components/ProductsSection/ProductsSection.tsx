@@ -44,13 +44,16 @@ function buildActiveTags(filters: FilterState): FilterTag[] {
   return tags
 }
 
-const INITIAL_PAGE_SIZE = 9
-const LOAD_MORE_SIZE = 9
+const INITIAL_PAGE_SIZE = 50
+const LOAD_MORE_SIZE = 50
 const SCROLL_DELAY_MS = 150
+
+type SortOption = 'price-desc' | 'price-asc'
 
 export default function ProductsSection({ products, bg = 'off-white' }: ProductsSectionProps) {
   const [search, setSearch] = useState('')
   const [filters, setFilters] = useState<FilterState>(getInitialFilterState())
+  const [sort, setSort] = useState<SortOption>('price-asc')
   const [visibleCount, setVisibleCount] = useState(INITIAL_PAGE_SIZE)
   const resultsRef = useRef<HTMLDivElement>(null)
   const isInitialMount = useRef(true)
@@ -60,11 +63,16 @@ export default function ProductsSection({ products, bg = 'off-white' }: Products
     () => filterProducts(products, filters, search),
     [products, filters, search]
   )
+  const sortedProducts = useMemo(() => {
+    const list = [...filteredProducts]
+    list.sort((a, b) => (sort === 'price-asc' ? a.price - b.price : b.price - a.price))
+    return list
+  }, [filteredProducts, sort])
   const visibleProducts = useMemo(
-    () => filteredProducts.slice(0, visibleCount),
-    [filteredProducts, visibleCount]
+    () => sortedProducts.slice(0, visibleCount),
+    [sortedProducts, visibleCount]
   )
-  const hasMore = visibleCount < filteredProducts.length
+  const hasMore = visibleCount < sortedProducts.length
   const activeTags = useMemo(() => buildActiveTags(filters), [filters])
 
   useEffect(() => {
@@ -138,12 +146,26 @@ export default function ProductsSection({ products, bg = 'off-white' }: Products
             />
 
             <div className="flex-1 min-w-0">
-              <div className="mb-6">
+              <div className="mb-4">
                 <SearchBar
                   value={search}
                   onChange={setSearch}
                   onSearch={() => {}}
                 />
+              </div>
+              <div className="flex justify-end mb-4">
+                <label className="font-inter text-[15px] text-black flex items-center gap-2">
+                  <span className="font-semibold">Sortiraj:</span>
+                  <select
+                    value={sort}
+                    onChange={(e) => setSort(e.target.value as SortOption)}
+                    className="border border-gray/40 bg-white px-3 py-2 font-inter text-[15px] text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-1"
+                    aria-label="Sortiraj po ceni"
+                  >
+                    <option value="price-asc">Cena od najniže</option>
+                    <option value="price-desc">Cena od najviše</option>
+                  </select>
+                </label>
               </div>
               <div ref={resultsRef} className="flex flex-col gap-5 pt-5 border-t border-gray">
                 {activeTags.length > 0 && (
@@ -157,7 +179,7 @@ export default function ProductsSection({ products, bg = 'off-white' }: Products
                       onClick={() => setVisibleCount((c) => c + LOAD_MORE_SIZE)}
                       className="border border-black bg-white px-8 py-3 font-inter text-base font-semibold text-black hover:bg-off-white transition-colors"
                     >
-                      Učitaj još ({filteredProducts.length - visibleCount} preostalo)
+                      Učitaj još ({sortedProducts.length - visibleCount} preostalo)
                     </button>
                   </div>
                 )}

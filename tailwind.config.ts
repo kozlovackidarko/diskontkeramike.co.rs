@@ -34,6 +34,15 @@ const config: Config = {
         white: '#FFFFFF',
         gray: '#999999'
       },
+      keyframes: {
+        'glow-pulse': {
+          '0%, 100%': { boxShadow: '0 0 28px 8px rgba(209, 113, 64, 0.4)' },
+          '50%': { boxShadow: '0 0 44px 16px rgba(209, 113, 64, 0.65)' },
+        },
+      },
+      animation: {
+        'glow-pulse': 'glow-pulse 2.5s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

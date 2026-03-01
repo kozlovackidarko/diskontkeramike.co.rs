@@ -143,11 +143,16 @@ export function getFilterOptions(products: Product[]): FilterOptions {
 
   const pairings = Array.from(
     new Set(products.map((p) => `${p.dimensions.width}x${p.dimensions.height}`))
-  ).sort((a, b) => {
-    const [aw, ah] = a.split('x').map(Number)
-    const [bw, bh] = b.split('x').map(Number)
-    return aw !== bw ? aw - bw : ah - bh
-  })
+  )
+    .filter((p) => {
+      const [w, h] = p.split('x').map(Number)
+      return w > 0 && h > 0
+    })
+    .sort((a, b) => {
+      const [aw, ah] = a.split('x').map(Number)
+      const [bw, bh] = b.split('x').map(Number)
+      return aw !== bw ? aw - bw : ah - bh
+    })
 
   return {
     categories,

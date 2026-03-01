@@ -11,8 +11,8 @@ export interface CollectionShowcaseProps {
   includeOnSale?: boolean
 }
 
-const INITIAL_PAGE_SIZE = 8
-const LOAD_MORE_SIZE = 8
+const INITIAL_PAGE_SIZE = 50
+const LOAD_MORE_SIZE = 50
 
 export default function CollectionShowcase({ collectionName, products, includeOnSale = false }: CollectionShowcaseProps) {
   const [visibleCount, setVisibleCount] = useState(INITIAL_PAGE_SIZE)

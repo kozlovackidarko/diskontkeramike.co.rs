@@ -33,8 +33,8 @@ const HOME_HERO = {
   imageSrc: '/images/hero-tiles.png',
   imageAlt: 'Ceramic tiles',
   buttons: [
-    { label: 'Cela ponuda', href: '/svi-proizvodi', variant: 'blue' as const },
-    { label: 'Naša preporuka', href: '/kategorija/nasa-preporuka', variant: 'orange' as const },
+    { label: 'Naša preporuka', href: '/kategorija/nasa-preporuka', variant: 'blue' as const },
+    { label: 'Rasprodaja', href: '/kategorija/rasprodaja', variant: 'orange' as const },
   ],
 }
 

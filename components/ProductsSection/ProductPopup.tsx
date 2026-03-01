@@ -45,8 +45,6 @@ export default function ProductPopup({ product, onClose }: ProductPopupProps) {
   }
 
   const dimensionsStr = `${product.dimensions.width}cm x ${product.dimensions.height}cm`
-  const hasThickness = typeof product.dimensions.thickness === 'number'
-  const thicknessStr = hasThickness ? `${product.dimensions.thickness}mm` : null
 
   return (
     <div
@@ -136,7 +134,7 @@ export default function ProductPopup({ product, onClose }: ProductPopupProps) {
           <dl className="grid gap-3 font-inter text-[15px]">
             <div>
               <dt className="font-semibold text-black">Dimenzije</dt>
-              <dd className="mt-0.5 text-gray">{dimensionsStr} (širina × dužina){thicknessStr != null ? `, debljina ${thicknessStr}` : ''}</dd>
+              <dd className="mt-0.5 text-gray">{dimensionsStr} (širina × dužina)</dd>
             </div>
             <div>
               <dt className="font-semibold text-black">Tip</dt>

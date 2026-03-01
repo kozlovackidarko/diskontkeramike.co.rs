@@ -9,20 +9,23 @@ var product_options_default = {
     { slug: "top-ponuda", name: "Top ponuda" },
     { slug: "protivklizna", name: "Protivklizna (anti-slip)" },
     { slug: "najpopularnije", name: "Najpopularnije" },
-    { slug: "top-artikli", name: "Top artikli" }
+    { slug: "rasprodaja", name: "Rasprodaja" }
   ],
   classes: ["Prva klasa", "Druga klasa"],
-  colors: ["Bela", "Plava", "Siva", "Braon", "Be\u017E"],
-  purposes: ["Spoljne", "Unutra\u0161nje", "Kupatilske", "Tersane", "Podne", "Zidne", "Bazen"],
+  colors: ["Bela", "Plava", "Siva", "Braon", "Be\u017E", "Crna"],
+  purposes: ["Spoljne", "Unutra\u0161nje", "Kupatilske", "Terasa", "Podne", "Zidne", "Bazen"],
   manufacturers: [
     "Crystal Ceramicas",
     "Yurtbay Seramik",
     "Savoia Italia",
     "Castelvetro",
     "AGL Asian Granito",
-    "Altin Ciniseramik"
+    "Altin Ciniseramik",
+    "Keramika Kanji\u017Ea",
+    "Flaminia Ceramica",
+    "Marazzi"
   ],
-  tileTypes: ["Mermer", "Beton", "Kamen", "Drvo", "Bazen"],
+  tileTypes: ["Mermer", "Beton", "Kamen", "Drvo", "Bazen", "Ostalo"],
   finalPolishes: ["Mat", "Sjajna", "Struktura", "Polirana", "Protivklizna"]
 };
 
