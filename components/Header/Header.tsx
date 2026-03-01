@@ -43,7 +43,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="bg-off-white relative">
+    <header className="bg-off-white relative z-50">
       <div className="px-4 sm:px-8 py-3">
         <div className="max-w-[1280px] mx-auto flex items-center justify-between relative">
           <Link href="/" className="flex items-center" aria-label="Početna">
@@ -185,13 +185,13 @@ export default function Header() {
             </button>
 
             <div
-              className={`absolute -right-4 sm:-right-0 top-full pt-1 z-10 transition-all duration-300 ease-in-out ${
+              className={`absolute -right-4 sm:-right-0 top-[120%] z-10 transition-all duration-300 ease-in-out ${
                 isMobileMenuOpen
                   ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-4 pointer-events-none invisible'
               }`}
             >
-              <div className="bg-off-white border border-gray/30 shadow-lg min-w-[200px] w-56 py-2">
+              <div className="bg-off-white border border-gray/30 shadow-lg min-w-[200px] w-56">
               <nav className="flex flex-col">
                 {navLinks.map((link) =>
                   link.label === 'Kategorije' ? (
@@ -254,7 +254,7 @@ export default function Header() {
                     </Link>
                   )
                 )}
-                <div className="md:hidden flex flex-col gap-1 pt-1 mt-1 border-t border-gray/20">
+                <div className="md:hidden flex flex-col border-t border-gray/20">
                   <Link
                     href="/kategorija/top-ponuda"
                     className="block font-inter text-base font-semibold text-white bg-red hover:opacity-90 px-4 py-2 text-center transition-opacity"
