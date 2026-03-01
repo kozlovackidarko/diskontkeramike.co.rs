@@ -3,32 +3,31 @@
   "type": "tile",
   "pictures": [
     {
-      "src": "/images/product-images/ALDA white.jpg"
+      "src": "/images/product-images/CORE grey.jpg"
     }
   ],
-  "name": "YS Alda White",
+  "name": "Core grey",
   "dimensions": {
-    "width": 40,
-    "height": 60,
-    "thickness": 6
+    "width": 80,
+    "height": 80,
+    "thickness": 10
   },
-  "tile_type": "Kamen",
+  "tile_type": "Beton",
   "final_polish": "Mat",
-  "price": 1600,
+  "price": 1800,
   "categories": [
-    "Naša preporuka"
+    "Top ponuda"
   ],
   "onSale": false,
   "class": "Prva klasa",
   "color": [
-    "Siva",
-    "Bela"
+    "Siva"
   ],
   "purpose": [
-    "Unutrašnje",
     "Spoljne",
-    "Podne",
-    "Tersane"
+    "Unutrašnje",
+    "Tersane",
+    "Podne"
   ],
   "manufacturer": "Yurtbay Seramik"
 }

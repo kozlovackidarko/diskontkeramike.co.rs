@@ -3,20 +3,20 @@
   "type": "tile",
   "pictures": [
     {
-      "src": "/images/product-images/royal-marble-60x60.jpg"
+      "src": "/images/product-images/cement triangle.jpg"
     }
   ],
-  "name": "YS Royal Marble 60x60",
+  "name": "Cemento triangle",
   "dimensions": {
-    "width": 60,
+    "width": 30,
     "height": 60,
-    "thickness": 0
+    "thickness": 0.9
   },
   "tile_type": "Mermer",
-  "final_polish": "Polirana",
-  "price": 1999,
+  "final_polish": "Mat",
+  "price": 950,
   "categories": [
-    "Naša preporuka"
+    "Top ponuda"
   ],
   "onSale": false,
   "class": "Prva klasa",
@@ -25,9 +25,10 @@
     "Siva"
   ],
   "purpose": [
-    "Unutrašnje",
     "Spoljne",
+    "Unutrašnje",
+    "Tersane",
     "Podne"
   ],
-  "manufacturer": "Yurtbay Seramik"
+  "manufacturer": "Crystal Ceramicas"
 }

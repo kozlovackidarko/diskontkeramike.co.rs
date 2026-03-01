@@ -1,0 +1,28 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/grazia nero.jpg"
+    }
+  ],
+  "name": "Grazia nero",
+  "dimensions": {
+    "width": 0,
+    "height": 0
+  },
+  "tile_type": "Mermer",
+  "price": 650,
+  "categories": [
+    "Top ponuda"
+  ],
+  "onSale": false,
+  "class": "Druga klasa",
+  "color": [],
+  "purpose": [
+    "Unutrašnje",
+    "Podne",
+    "Tersane"
+  ],
+  "manufacturer": "Crystal Ceramicas"
+}

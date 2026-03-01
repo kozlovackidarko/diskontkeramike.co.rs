@@ -2,9 +2,10 @@ import Link from 'next/link'
 import { getCategoryLinks } from '@/lib/product-options'
 
 const COMPANY = {
-  name: 'Gile Promet d.o.o.',
+  name: 'Gille Promet d.o.o.',
   address: 'Bulevar Oslobođenja 23, Beograd',
-  pib: '2615120161616',
+  pib: '101161672',
+  mb: '08212864',
   phone: '+381695662009',
   phoneDisplay: '069/56-62-009',
   email: 'kozlovacki.darko@gmail.com',
@@ -34,6 +35,7 @@ export default function Footer() {
                 <li>Ime: <span className="font-semibold">{COMPANY.name}</span></li>
                 {/* <li>Adresa: <span className="font-semibold">{COMPANY.address}</span></li> */}
                 <li>PIB: <span className="font-semibold">{COMPANY.pib}</span></li>
+                <li>MB: <span className="font-semibold">{COMPANY.mb}</span></li>
                 <li>
                   Kontakt telefon:{' '}
                   <a
@@ -90,7 +92,7 @@ export default function Footer() {
       </div>
       <div className="py-4">
         <p className="font-inter text-[12px] xs:text-sm text-center py-4 px-4">
-          © Copyright 2025 | Diskont Keramike - Gile Promet d.o.o.
+          © Copyright 2025 | Diskont Keramike - Gille Promet d.o.o.
         </p>
       </div>
     </footer>

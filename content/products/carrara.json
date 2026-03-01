@@ -3,18 +3,18 @@
   "type": "tile",
   "pictures": [
     {
-      "src": "/images/product-images/ALDA white.jpg"
+      "src": "/images/product-images/Carrara.jpg"
     }
   ],
-  "name": "YS Alda White",
+  "name": "Carrara",
   "dimensions": {
-    "width": 40,
-    "height": 60,
-    "thickness": 6
+    "width": 34,
+    "height": 34,
+    "thickness": 0.9
   },
-  "tile_type": "Kamen",
+  "tile_type": "Mermer",
   "final_polish": "Mat",
-  "price": 1600,
+  "price": 1300,
   "categories": [
     "Naša preporuka"
   ],
@@ -25,10 +25,10 @@
     "Bela"
   ],
   "purpose": [
-    "Unutrašnje",
     "Spoljne",
-    "Podne",
-    "Tersane"
+    "Unutrašnje",
+    "Tersane",
+    "Podne"
   ],
-  "manufacturer": "Yurtbay Seramik"
+  "manufacturer": "Crystal Ceramicas"
 }

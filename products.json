@@ -121,7 +121,7 @@
     "class": "Druga klasa",
     "color": "Bela",
     "purpose": ["Unutrašnje", "Zidne"],
-    "manufacturer": "Aglasian Granito"
+    "manufacturer": "AGL Asian Granito"
   },
   {
     "type": ["tile"],
@@ -138,7 +138,7 @@
     "class": "Druga klasa",
     "color": "Bela",
     "purpose": ["Unutrašnje", "Zidne"],
-    "manufacturer": "Aglasian Granito"
+    "manufacturer": "AGL Asian Granito"
   },
   {
     "type": ["tile"],
@@ -155,7 +155,7 @@
     "class": "Druga klasa",
     "color": "Bela",
     "purpose": ["Unutrašnje", "Zidne"],
-    "manufacturer": "Aglasian Granito"
+    "manufacturer": "AGL Asian Granito"
   },
   {
     "type": ["tile"],
@@ -172,6 +172,6 @@
     "class": "Druga klasa",
     "color": "Bela",
     "purpose": ["Unutrašnje", "Podne"],
-    "manufacturer": "Aglasian Granito"
+    "manufacturer": "AGL Asian Granito"
   }
 ]

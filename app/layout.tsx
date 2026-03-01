@@ -19,7 +19,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://diskontkeramike.co.
 
 export const metadata: Metadata = {
   title: 'Diskont Keramike',
-  description: 'A Next.js website for the Gile Promet d.o.o. company.',
+  description: 'A Next.js website for the Gille Promet d.o.o. company.',
   metadataBase: new URL(siteUrl),
   icons: {
     icon: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Diskont Keramike',
-    description: 'A Next.js website for the Gile Promet d.o.o. company.',
+    description: 'A Next.js website for the Gille Promet d.o.o. company.',
     url: siteUrl,
     siteName: 'Diskont Keramike',
     images: [
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary',
     title: 'Diskont Keramike',
-    description: 'A Next.js website for the Gile Promet d.o.o. company.',
+    description: 'A Next.js website for the Gille Promet d.o.o. company.',
     images: ['/icons/icon-192.png'],
   },
 }

@@ -3,32 +3,31 @@
   "type": "tile",
   "pictures": [
     {
-      "src": "/images/product-images/ALDA white.jpg"
+      "src": "/images/product-images/barkwood beige.jpg"
     }
   ],
-  "name": "YS Alda White",
+  "name": "Barkwood beige ",
   "dimensions": {
-    "width": 40,
-    "height": 60,
-    "thickness": 6
+    "width": 15,
+    "height": 90,
+    "thickness": 9.5
   },
-  "tile_type": "Kamen",
+  "tile_type": "Drvo",
   "final_polish": "Mat",
-  "price": 1600,
+  "price": 1500,
   "categories": [
     "Naša preporuka"
   ],
   "onSale": false,
   "class": "Prva klasa",
   "color": [
-    "Siva",
-    "Bela"
+    "Bež"
   ],
   "purpose": [
-    "Unutrašnje",
     "Spoljne",
-    "Podne",
-    "Tersane"
+    "Unutrašnje",
+    "Tersane",
+    "Podne"
   ],
   "manufacturer": "Yurtbay Seramik"
 }

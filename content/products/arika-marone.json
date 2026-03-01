@@ -1,0 +1,30 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/arika marone.jpg"
+    }
+  ],
+  "name": "Arika marone",
+  "dimensions": {
+    "width": 25,
+    "height": 37,
+    "thickness": 0.8
+  },
+  "final_polish": "Mat",
+  "price": 350,
+  "categories": [
+    "Top ponuda"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Braon"
+  ],
+  "purpose": [
+    "Zidne",
+    "Kupatilske"
+  ],
+  "manufacturer": "Crystal Ceramicas"
+}

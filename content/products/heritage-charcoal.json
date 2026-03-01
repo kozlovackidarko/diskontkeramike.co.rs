@@ -1,0 +1,33 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/Heritage%20charcoal.jpg"
+    }
+  ],
+  "name": "Heritage charcoal",
+  "dimensions": {
+    "width": 90,
+    "height": 90,
+    "thickness": 10
+  },
+  "tile_type": "Beton",
+  "final_polish": "Mat",
+  "price": 1250,
+  "categories": [
+    "Top ponuda"
+  ],
+  "onSale": false,
+  "class": "Druga klasa",
+  "color": [
+    "Siva"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Tersane",
+    "Podne"
+  ],
+  "manufacturer": "Savoia Italia"
+}

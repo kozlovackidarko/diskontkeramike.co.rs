@@ -3,32 +3,31 @@
   "type": "tile",
   "pictures": [
     {
-      "src": "/images/product-images/ALDA white.jpg"
+      "src": "/images/product-images/20260224_134724.jpg"
     }
   ],
-  "name": "YS Alda White",
+  "name": "Cemeto patern smoke",
   "dimensions": {
-    "width": 40,
+    "width": 60,
     "height": 60,
-    "thickness": 6
+    "thickness": 10
   },
-  "tile_type": "Kamen",
+  "tile_type": "Beton",
   "final_polish": "Mat",
-  "price": 1600,
+  "price": 999,
   "categories": [
     "Naša preporuka"
   ],
   "onSale": false,
-  "class": "Prva klasa",
+  "class": "Druga klasa",
   "color": [
-    "Siva",
-    "Bela"
+    "Siva"
   ],
   "purpose": [
-    "Unutrašnje",
     "Spoljne",
+    "Unutrašnje",
     "Podne",
     "Tersane"
   ],
-  "manufacturer": "Yurtbay Seramik"
+  "manufacturer": "Crystal Ceramicas"
 }

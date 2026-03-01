@@ -29,8 +29,7 @@ export interface FilterState {
   categories: string[]
   priceMin: number | null
   priceMax: number | null
-  width: number | null
-  height: number | null
+  dimensions: string[]
   tile_types: string[]
   final_polishes: string[]
   classes: string[]
@@ -42,8 +41,7 @@ export interface FilterState {
 export interface FilterOptions {
   categories: string[]
   priceSteps: number[]
-  widths: number[]
-  heights: number[]
+  dimensionPairings: string[]
   tileTypes: string[]
   finalPolishes: string[]
   classes: string[]
@@ -143,11 +141,18 @@ export function getFilterOptions(products: Product[]): FilterOptions {
   const maxPrice = Math.max(...products.map((p) => p.price))
   const priceSteps = [500, 1000, 1500, 2000, 2500, 3000, 5000].filter((s) => s <= maxPrice + 500)
 
+  const pairings = Array.from(
+    new Set(products.map((p) => `${p.dimensions.width}x${p.dimensions.height}`))
+  ).sort((a, b) => {
+    const [aw, ah] = a.split('x').map(Number)
+    const [bw, bh] = b.split('x').map(Number)
+    return aw !== bw ? aw - bw : ah - bh
+  })
+
   return {
     categories,
     priceSteps: [0, ...priceSteps],
-    widths: Array.from(new Set(products.map((p) => p.dimensions.width))).sort((a, b) => a - b),
-    heights: Array.from(new Set(products.map((p) => p.dimensions.height))).sort((a, b) => a - b),
+    dimensionPairings: pairings,
     tileTypes: orderByConfig(
       Array.from(new Set(products.map((p) => p.tile_type).filter((t): t is string => !!t && notRefPath(t)))),
       TILE_TYPES
@@ -195,8 +200,8 @@ export function filterProducts(
     }
     if (filters.priceMin != null && p.price < filters.priceMin) return false
     if (filters.priceMax != null && p.price > filters.priceMax) return false
-    if (filters.width != null && p.dimensions.width !== filters.width) return false
-    if (filters.height != null && p.dimensions.height !== filters.height) return false
+    const dimKey = `${p.dimensions.width}x${p.dimensions.height}`
+    if (filters.dimensions.length > 0 && !filters.dimensions.includes(dimKey)) return false
     if (filters.tile_types.length > 0 && (!p.tile_type || !filters.tile_types.includes(p.tile_type))) return false
     if (filters.final_polishes.length > 0 && (!p.final_polish || !filters.final_polishes.includes(p.final_polish))) return false
     if (filters.classes.length > 0 && !filters.classes.includes(p.class)) return false
@@ -212,8 +217,7 @@ export function getInitialFilterState(): FilterState {
     categories: [],
     priceMin: null,
     priceMax: null,
-    width: null,
-    height: null,
+    dimensions: [],
     tile_types: [],
     final_polishes: [],
     classes: [],

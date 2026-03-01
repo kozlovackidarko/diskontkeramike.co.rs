@@ -1,0 +1,32 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/area stone.jpg"
+    }
+  ],
+  "name": "Area stone",
+  "dimensions": {
+    "width": 25,
+    "height": 25,
+    "thickness": 10
+  },
+  "tile_type": "Kamen",
+  "price": 999,
+  "categories": [
+    "Top ponuda"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Bež"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Tersane",
+    "Podne"
+  ],
+  "manufacturer": "Crystal Ceramicas"
+}

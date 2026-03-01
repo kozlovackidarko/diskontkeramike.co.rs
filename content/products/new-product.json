@@ -3,31 +3,31 @@
   "type": "tile",
   "pictures": [
     {
-      "src": "/images/product-images/hera-60x60.jpg"
+      "src": "/images/product-images/la blue nero.jpg"
     }
   ],
-  "name": "AC Hera Beige",
+  "name": "La blue nero",
   "dimensions": {
     "width": 60,
     "height": 60,
     "thickness": 10
   },
-  "tile_type": "Mermer",
+  "tile_type": "Beton",
   "final_polish": "Mat",
-  "price": 1200,
+  "price": 1300,
   "categories": [
-    "Najpopularnije",
-    "Top artikli"
+    "Naša preporuka"
   ],
   "onSale": false,
-  "class": "Prva klasa",
+  "class": "Druga klasa",
   "color": [
-    "Bela"
+    "Siva"
   ],
   "purpose": [
+    "Podne",
+    "Tersane",
     "Unutrašnje",
-    "Zidne",
-    "Podne"
+    "Spoljne"
   ],
-  "manufacturer": "Altin Ciniseramik"
+  "manufacturer": "Savoia Italia"
 }
