@@ -6,10 +6,11 @@
       "src": "/images/product-images/Eden naturale AS 20x120.jpg"
     }
   ],
-  "name": "Eden naturale",
+  "name": "Eden naturale AS",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 20,
+    "height": 120,
+    "thickness": 10
   },
   "price": 0,
   "categories": [],
