@@ -1,7 +1,11 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/Artico 60x60.jpg"
+    }
+  ],
   "name": "Artico white home",
   "dimensions": {
     "width": 59,
