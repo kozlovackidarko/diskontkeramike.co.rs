@@ -1,0 +1,21 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/Memory grigio 15x100.jpg"
+    }
+  ],
+  "name": "Memory grigio",
+  "dimensions": {
+    "width": 0,
+    "height": 0
+  },
+  "price": 0,
+  "categories": [],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [],
+  "purpose": [],
+  "manufacturer": "Crystal Ceramicas"
+}
