@@ -1,7 +1,11 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/Savage natural 20x120.jpg"
+    }
+  ],
   "name": "Savage naturel",
   "dimensions": {
     "width": 20,
