@@ -1,7 +1,11 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/Memory tortora AS 15x100.jpg"
+    }
+  ],
   "name": "Memory tortora AS",
   "dimensions": {
     "width": 15,
