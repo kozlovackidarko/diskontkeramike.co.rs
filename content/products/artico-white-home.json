@@ -1,0 +1,18 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [],
+  "name": "Artico white home",
+  "dimensions": {
+    "width": 59,
+    "height": 59,
+    "thickness": 10
+  },
+  "price": 0,
+  "categories": [],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [],
+  "purpose": [],
+  "manufacturer": "Crystal Ceramicas"
+}
