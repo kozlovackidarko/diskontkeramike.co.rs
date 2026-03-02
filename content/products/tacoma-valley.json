@@ -8,14 +8,27 @@
   ],
   "name": "Tacoma valley",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 15,
+    "height": 100,
+    "thickness": 10
   },
-  "price": 0,
-  "categories": [],
+  "tile_type": "Drvo",
+  "final_polish": "Mat",
+  "price": 1200,
+  "categories": [
+    "Top ponuda"
+  ],
   "onSale": false,
-  "class": "Prva klasa",
-  "color": [],
-  "purpose": [],
-  "manufacturer": "Crystal Ceramicas"
+  "class": "Druga klasa",
+  "color": [
+    "Braon",
+    "Bež"
+  ],
+  "purpose": [
+    "Podne",
+    "Terasa",
+    "Unutrašnje",
+    "Spoljne"
+  ],
+  "manufacturer": "Savoia Italia"
 }
