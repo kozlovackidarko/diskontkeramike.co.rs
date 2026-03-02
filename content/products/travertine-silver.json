@@ -8,8 +8,9 @@
   ],
   "name": "Travertine silver",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 60,
+    "height": 120,
+    "thickness": 10
   },
   "tile_type": "Kamen",
   "final_polish": "Mat",
