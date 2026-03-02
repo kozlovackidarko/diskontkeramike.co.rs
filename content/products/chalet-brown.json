@@ -1,0 +1,32 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/Chalet brown 20x120.jpg"
+    }
+  ],
+  "name": "Chalet brown",
+  "dimensions": {
+    "width": 0,
+    "height": 0
+  },
+  "tile_type": "Drvo",
+  "final_polish": "Mat",
+  "price": 2360,
+  "categories": [
+    "Naša preporuka"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Braon"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Terasa",
+    "Podne"
+  ],
+  "manufacturer": "Savoia Italia"
+}
