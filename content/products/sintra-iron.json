@@ -8,14 +8,26 @@
   ],
   "name": "Sintra iron",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 30,
+    "height": 120,
+    "thickness": 10
   },
-  "price": 0,
-  "categories": [],
+  "tile_type": "Mermer",
+  "final_polish": "Mat",
+  "price": 2000,
+  "categories": [
+    "Top ponuda"
+  ],
   "onSale": false,
   "class": "Prva klasa",
-  "color": [],
-  "purpose": [],
-  "manufacturer": "Crystal Ceramicas"
+  "color": [
+    "Siva"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Terasa",
+    "Podne"
+  ],
+  "manufacturer": "Savoia Italia"
 }
