@@ -8,8 +8,9 @@
   ],
   "name": "Memory grigio",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 15,
+    "height": 100,
+    "thickness": 10
   },
   "price": 0,
   "categories": [],
