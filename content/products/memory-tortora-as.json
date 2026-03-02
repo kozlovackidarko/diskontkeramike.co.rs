@@ -8,11 +8,22 @@
     "height": 100,
     "thickness": 10
   },
-  "price": 0,
-  "categories": [],
+  "tile_type": "Drvo",
+  "final_polish": "Protivklizna",
+  "price": 1800,
+  "categories": [
+    "Top ponuda"
+  ],
   "onSale": false,
   "class": "Prva klasa",
-  "color": [],
-  "purpose": [],
-  "manufacturer": "Crystal Ceramicas"
+  "color": [
+    "Siva",
+    "Braon"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Terasa",
+    "Podne"
+  ],
+  "manufacturer": "Savoia Italia"
 }
