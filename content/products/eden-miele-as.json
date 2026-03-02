@@ -1,0 +1,28 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [],
+  "name": "Eden miele AS",
+  "dimensions": {
+    "width": 20,
+    "height": 120,
+    "thickness": 10
+  },
+  "tile_type": "Drvo",
+  "final_polish": "Protivklizna",
+  "price": 1500,
+  "categories": [
+    "Top ponuda"
+  ],
+  "onSale": false,
+  "class": "Druga klasa",
+  "color": [
+    "Bež",
+    "Braon"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Terasa"
+  ],
+  "manufacturer": "Savoia Italia"
+}
