@@ -1,0 +1,32 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/Travertine silver 60x120.jpg"
+    }
+  ],
+  "name": "Travertine silver",
+  "dimensions": {
+    "width": 0,
+    "height": 0
+  },
+  "tile_type": "Kamen",
+  "final_polish": "Mat",
+  "price": 2000,
+  "categories": [
+    "Top ponuda"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Siva"
+  ],
+  "purpose": [
+    "Podne",
+    "Terasa",
+    "Unutrašnje",
+    "Spoljne"
+  ],
+  "manufacturer": "Savoia Italia"
+}
