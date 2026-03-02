@@ -8,14 +8,26 @@
   ],
   "name": "Vintage grigio",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 20,
+    "height": 120,
+    "thickness": 10
   },
-  "price": 0,
-  "categories": [],
+  "tile_type": "Drvo",
+  "final_polish": "Mat",
+  "price": 1600,
+  "categories": [
+    "Top ponuda"
+  ],
   "onSale": false,
-  "class": "Prva klasa",
-  "color": [],
-  "purpose": [],
-  "manufacturer": "Crystal Ceramicas"
+  "class": "Druga klasa",
+  "color": [
+    "Siva"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Terasa",
+    "Podne"
+  ],
+  "manufacturer": "Savoia Italia"
 }
