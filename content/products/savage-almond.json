@@ -1,7 +1,11 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/Savage almond 20x120.jpg"
+    }
+  ],
   "name": "Savage almond",
   "dimensions": {
     "width": 20,
