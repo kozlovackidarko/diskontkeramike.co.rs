@@ -8,8 +8,9 @@
   ],
   "name": "Chalet brown",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 20,
+    "height": 1200,
+    "thickness": 10
   },
   "tile_type": "Drvo",
   "final_polish": "Mat",
