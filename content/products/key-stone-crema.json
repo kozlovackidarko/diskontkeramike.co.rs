@@ -1,0 +1,30 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [],
+  "name": "Key stone crema",
+  "dimensions": {
+    "width": 40,
+    "height": 60,
+    "thickness": 10
+  },
+  "tile_type": "Kamen",
+  "final_polish": "Mat",
+  "price": 700,
+  "categories": [
+    "Rasprodaja"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Bež",
+    "Braon"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Terasa",
+    "Podne"
+  ],
+  "manufacturer": "Yurtbay Seramik"
+}
