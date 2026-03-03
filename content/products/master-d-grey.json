@@ -8,8 +8,9 @@
   ],
   "name": "Master d grey ",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 60,
+    "height": 60,
+    "thickness": 10
   },
   "tile_type": "Beton",
   "final_polish": "Mat",
