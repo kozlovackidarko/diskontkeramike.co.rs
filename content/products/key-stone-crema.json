@@ -1,7 +1,11 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/Key stone crema.jpg"
+    }
+  ],
   "name": "Key stone crema",
   "dimensions": {
     "width": 40,
