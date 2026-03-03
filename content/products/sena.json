@@ -1,0 +1,21 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/calacatta gold 2.jpg"
+    }
+  ],
+  "name": "Sena",
+  "dimensions": {
+    "width": 0,
+    "height": 0
+  },
+  "price": 0,
+  "categories": [],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [],
+  "purpose": [],
+  "manufacturer": "Crystal Ceramicas"
+}
