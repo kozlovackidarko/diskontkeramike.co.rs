@@ -1,0 +1,32 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [
+    {
+      "src": "/images/product-images/Master d grey.jpg"
+    }
+  ],
+  "name": "Master d grey ",
+  "dimensions": {
+    "width": 0,
+    "height": 0
+  },
+  "tile_type": "Beton",
+  "final_polish": "Mat",
+  "price": 500,
+  "categories": [
+    "Rasprodaja"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Siva"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Terasa",
+    "Podne"
+  ],
+  "manufacturer": "Savoia Italia"
+}
