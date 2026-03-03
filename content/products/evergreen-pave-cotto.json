@@ -1,0 +1,26 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [],
+  "name": "Evergreen pave cotto",
+  "dimensions": {
+    "width": 34,
+    "height": 34,
+    "thickness": 10
+  },
+  "tile_type": "Kamen",
+  "final_polish": "Protivklizna",
+  "price": 1400,
+  "categories": [
+    "Naša preporuka"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [],
+  "purpose": [
+    "Spoljne",
+    "Terasa",
+    "Podne"
+  ],
+  "manufacturer": "Savoia Italia"
+}
