@@ -8,14 +8,26 @@
   ],
   "name": "Lignum rustic grey 15x60",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 15,
+    "height": 60,
+    "thickness": 10
   },
-  "price": 0,
-  "categories": [],
+  "tile_type": "Drvo",
+  "final_polish": "Mat",
+  "price": 1400,
+  "categories": [
+    "Naša preporuka"
+  ],
   "onSale": false,
   "class": "Prva klasa",
-  "color": [],
-  "purpose": [],
-  "manufacturer": "Crystal Ceramicas"
+  "color": [
+    "Siva"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Terasa",
+    "Podne"
+  ],
+  "manufacturer": "Savoia Italia"
 }
