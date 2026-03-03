@@ -6,16 +6,28 @@
       "src": "/images/product-images/calacatta gold 2.jpg"
     }
   ],
-  "name": "Sena",
+  "name": "Calacatta gold",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 90,
+    "height": 90,
+    "thickness": 10
   },
-  "price": 0,
-  "categories": [],
+  "tile_type": "Mermer",
+  "final_polish": "Mat",
+  "price": 2490,
+  "categories": [
+    "Top ponuda"
+  ],
   "onSale": false,
   "class": "Prva klasa",
-  "color": [],
-  "purpose": [],
+  "color": [
+    "Bela"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Terasa",
+    "Podne"
+  ],
   "manufacturer": "Crystal Ceramicas"
 }
