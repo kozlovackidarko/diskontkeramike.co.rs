@@ -8,14 +8,27 @@
   ],
   "name": "Calacatta gold M",
   "dimensions": {
-    "width": 0,
-    "height": 0
+    "width": 60,
+    "height": 120,
+    "thickness": 10
   },
-  "price": 0,
-  "categories": [],
+  "tile_type": "Mermer",
+  "final_polish": "Mat",
+  "price": 1800,
+  "categories": [
+    "Naša preporuka"
+  ],
   "onSale": false,
-  "class": "Prva klasa",
-  "color": [],
-  "purpose": [],
+  "class": "Druga klasa",
+  "color": [
+    "Bela"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Terasa",
+    "Podne",
+    "Kupatilske"
+  ],
   "manufacturer": "Crystal Ceramicas"
 }
