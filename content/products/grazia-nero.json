@@ -14,15 +14,18 @@
   "tile_type": "Mermer",
   "price": 650,
   "categories": [
-    "Top ponuda"
+    "Top ponuda",
+    "Rasprodaja"
   ],
   "onSale": false,
   "class": "Druga klasa",
-  "color": [],
+  "color": [
+    "Crna"
+  ],
   "purpose": [
     "Unutrašnje",
     "Podne",
     "Tersane"
   ],
-  "manufacturer": "Crystal Ceramicas"
+  "manufacturer": "Keramika Kanjiža"
 }
