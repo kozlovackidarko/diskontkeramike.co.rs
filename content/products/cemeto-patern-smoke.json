@@ -16,7 +16,8 @@
   "final_polish": "Mat",
   "price": 999,
   "categories": [
-    "Naša preporuka"
+    "Naša preporuka",
+    "Rasprodaja"
   ],
   "onSale": false,
   "class": "Druga klasa",
@@ -27,7 +28,8 @@
     "Spoljne",
     "Unutrašnje",
     "Podne",
-    "Tersane"
+    "Tersane",
+    "Terasa"
   ],
-  "manufacturer": "Crystal Ceramicas"
+  "manufacturer": "Keramika Kanjiža"
 }
