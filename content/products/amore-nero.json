@@ -16,14 +16,17 @@
   "final_polish": "Sjajna",
   "price": 450,
   "categories": [
-    "Top ponuda"
+    "Top ponuda",
+    "Rasprodaja"
   ],
   "onSale": false,
   "class": "Prva klasa",
-  "color": [],
+  "color": [
+    "Crna"
+  ],
   "purpose": [
     "Zidne",
     "Kupatilske"
   ],
-  "manufacturer": "Crystal Ceramicas"
+  "manufacturer": "Keramika Kanjiža"
 }
