@@ -12,10 +12,12 @@
     "height": 37,
     "thickness": 0.8
   },
+  "tile_type": "Ostalo",
   "final_polish": "Mat",
   "price": 350,
   "categories": [
-    "Top ponuda"
+    "Top ponuda",
+    "Rasprodaja"
   ],
   "onSale": false,
   "class": "Prva klasa",
@@ -26,5 +28,5 @@
     "Zidne",
     "Kupatilske"
   ],
-  "manufacturer": "Crystal Ceramicas"
+  "manufacturer": "Keramika Kanjiža"
 }
