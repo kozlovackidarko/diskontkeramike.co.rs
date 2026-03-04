@@ -16,14 +16,17 @@
   "final_polish": "Mat",
   "price": 400,
   "categories": [
-    "Top ponuda"
+    "Top ponuda",
+    "Rasprodaja"
   ],
   "onSale": false,
   "class": "Prva klasa",
-  "color": [],
+  "color": [
+    "Crna"
+  ],
   "purpose": [
     "Kupatilske",
     "Zidne"
   ],
-  "manufacturer": "Crystal Ceramicas"
+  "manufacturer": "Keramika Kanjiža"
 }
