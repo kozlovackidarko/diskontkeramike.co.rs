@@ -13,9 +13,11 @@
     "thickness": 10
   },
   "tile_type": "Beton",
+  "final_polish": "Mat",
   "price": 1300,
   "categories": [
-    "Naša preporuka"
+    "Naša preporuka",
+    "Rasprodaja"
   ],
   "onSale": false,
   "class": "Prva klasa",
@@ -28,5 +30,5 @@
     "Tersane",
     "Podne"
   ],
-  "manufacturer": "Crystal Ceramicas"
+  "manufacturer": "Keramika Kanjiža"
 }
