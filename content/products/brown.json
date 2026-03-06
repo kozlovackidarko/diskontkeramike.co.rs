@@ -16,7 +16,8 @@
   "final_polish": "Mat",
   "price": 350,
   "categories": [
-    "Top ponuda"
+    "Top ponuda",
+    "Rasprodaja"
   ],
   "onSale": false,
   "class": "Prva klasa",
@@ -27,5 +28,5 @@
     "Kupatilske",
     "Zidne"
   ],
-  "manufacturer": "Crystal Ceramicas"
+  "manufacturer": "Flaminia Ceramica"
 }
