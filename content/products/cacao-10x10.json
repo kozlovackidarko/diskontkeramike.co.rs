@@ -15,7 +15,8 @@
   "tile_type": "Beton",
   "price": 350,
   "categories": [
-    "Top ponuda"
+    "Top ponuda",
+    "Rasprodaja"
   ],
   "onSale": false,
   "class": "Prva klasa",
@@ -26,5 +27,5 @@
     "Zidne",
     "Kupatilske"
   ],
-  "manufacturer": "Crystal Ceramicas"
+  "manufacturer": "Flaminia Ceramica"
 }
