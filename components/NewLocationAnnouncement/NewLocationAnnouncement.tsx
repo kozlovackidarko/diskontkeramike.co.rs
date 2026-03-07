@@ -34,7 +34,7 @@ export default function NewLocationAnnouncement() {
           Hajduk Veljkova bb, Kraljevo
         </p>
         <p className="font-inter text-[15px] text-black">
-          Magacin preko vrtica i firme Pub internacional
+          Magacin preko puta vrtica i firme Pub Internacional
         </p>
         <p className="font-inter text-base font-semibold text-orange pt-1">
           Otvaranje: 16.03.2026.
