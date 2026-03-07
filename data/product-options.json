@@ -8,7 +8,7 @@
     { "slug": "rasprodaja", "name": "Rasprodaja" }
   ],
   "classes": ["Prva klasa", "Druga klasa"],
-  "colors": ["Bela", "Plava", "Siva", "Braon", "Bež","Crna"],
+  "colors": ["Bela", "Plava", "Siva", "Braon", "Bež", "Crna", "Crvena"],
   "purposes": ["Spoljne", "Unutrašnje", "Kupatilske", "Terasa", "Podne", "Zidne", "Bazen"],
   "manufacturers": [
     "Crystal Ceramicas",

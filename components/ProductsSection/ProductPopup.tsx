@@ -70,10 +70,15 @@ export default function ProductPopup({ product, onClose }: ProductPopupProps) {
         <div className="flex min-h-0 flex-1 flex-col overflow-y-auto">
         <div className="relative aspect-square w-full shrink-0 overflow-hidden bg-off-white">
           {pictures.map((src, i) => (
-            <div
+            <a
               key={`${i}-${src}`}
-              className={`absolute inset-0 transition-opacity duration-300 ${i === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+              href={src}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className={`absolute inset-0 block transition-opacity duration-300 ${i === currentIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
               aria-hidden={i !== currentIndex}
+              title="Otvori sliku u novom tabu"
             >
               <Image
                 src={src}
@@ -82,7 +87,7 @@ export default function ProductPopup({ product, onClose }: ProductPopupProps) {
                 className="object-cover"
                 sizes="(max-width: 512px) 100vw, 512px"
               />
-            </div>
+            </a>
           ))}
           {hasMultiple && (
             <>
@@ -135,10 +140,6 @@ export default function ProductPopup({ product, onClose }: ProductPopupProps) {
             <div>
               <dt className="font-semibold text-black">Dimenzije</dt>
               <dd className="mt-0.5 text-gray">{dimensionsStr} (širina × dužina)</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-black">Tip</dt>
-              <dd className="mt-0.5 text-gray">{product.type.join(', ')}</dd>
             </div>
             {product.tile_type && (
               <div>

@@ -6,7 +6,8 @@ const PARTNERS = [
   { name: 'Yurtbay Seramik', image: '/images/partners-yurtbay-seramik.jpg', href: 'https://www.yurtbayseramik.com/en' },
   { name: 'Savoia Italia', image: '/images/partners-savoia-italia.jpg', href: 'https://www.savoiaitalia.com/' },
   { name: 'Castelvetro', image: '/images/partners-castel-vetro.jpg', href: 'https://www.castelvetro.it/' },
-  { name: 'AGL Asian Granito', image: '/images/partners-aglasian-granito.jpg', href: 'https://aglasiangranito.com/' },
+  { name: 'AGL Asian Granito', image: '/images/partners-aglasian-granito.png', href: 'https://aglasiangranito.com/' },
+  { name: 'Altin Ciniseramik', image: '/images/partners-altin-ciniseramik.png', href: 'https://www.altincini.com.tr/' },
 ]
 
 export default function PartnersSection() {
@@ -47,13 +48,13 @@ export default function PartnersSection() {
               ))}
             </div>
             <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-              {PARTNERS.slice(3, 5).map((partner) => (
+              {PARTNERS.slice(3, 6).map((partner) => (
                 <a
                   key={partner.name}
                   href={partner.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative w-full flex-1 min-w-0 shrink-0 h-[284px] overflow-hidden group block min-h-[240px]"
+                  className="relative w-full flex-1 min-w-0 shrink-0 h-[375px] overflow-hidden group block min-h-[240px]"
                 >
                   <div className="absolute inset-0">
                     <Image
@@ -61,7 +62,7 @@ export default function PartnersSection() {
                       alt={partner.name}
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, 50vw"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
                   <div className="absolute inset-0 bg-black/30" />

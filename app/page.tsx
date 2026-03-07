@@ -1,5 +1,6 @@
 import Header from '@/components/Header/Header'
 import Hero from '@/components/Hero/Hero'
+import NewLocationAnnouncement from '@/components/NewLocationAnnouncement/NewLocationAnnouncement'
 import Divider from '@/components/Divider/Divider'
 import ProductsSection from '@/components/ProductsSection/ProductsSection'
 import PartnersSection from '@/components/PartnersSection/PartnersSection'
@@ -44,7 +45,7 @@ export default async function Home() {
     <>
       <Header />
       <main className="min-h-screen">
-        <Hero {...HOME_HERO} />
+        <Hero {...HOME_HERO} rightContent={<NewLocationAnnouncement />} />
         <Divider />
         <ProductsSection products={products} />
         <PartnersSection />

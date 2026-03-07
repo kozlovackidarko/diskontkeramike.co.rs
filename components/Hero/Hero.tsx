@@ -12,12 +12,14 @@ export interface HeroProps {
   title: string
   subtitle?: string
   description: string
-  imageSrc: string
-  imageAlt: string
+  imageSrc?: string
+  imageAlt?: string
   buttons: HeroButton[]
+  /** When set, shown instead of the image on the right. */
+  rightContent?: React.ReactNode
 }
 
-export default function Hero({ title, subtitle, description, imageSrc, imageAlt, buttons }: HeroProps) {
+export default function Hero({ title, subtitle, description, imageSrc, imageAlt, buttons, rightContent }: HeroProps) {
   return (
     <section className="bg-white py-8 md:py-16 lg:py-20">
       <div className="px-4 sm:px-8">
@@ -55,22 +57,24 @@ export default function Hero({ title, subtitle, description, imageSrc, imageAlt,
                 </div>
               )}
             </div>
-            <div className="relative flex lg:justify-start">
-              <div className="relative w-full lg:w-[480px] aspect-[16/9.2]">
-                <Image
-                  src={assetUrl(imageSrc)}
-                  alt={imageAlt}
-                  fill
-                  className="object-cover"
-                />
-                <Image
-                  src={assetUrl('/icons/image-frame-hero.svg')}
-                  alt=""
-                  fill
-                  className="object-cover pointer-events-none"
-                  aria-hidden="true"
-                />
-              </div>
+            <div className="relative flex lg:justify-start w-full lg:w-auto">
+              {rightContent ?? (imageSrc != null && imageAlt != null ? (
+                <div className="relative w-full lg:w-[480px] aspect-[16/9.2]">
+                  <Image
+                    src={assetUrl(imageSrc)}
+                    alt={imageAlt}
+                    fill
+                    className="object-cover"
+                  />
+                  <Image
+                    src={assetUrl('/icons/image-frame-hero.svg')}
+                    alt=""
+                    fill
+                    className="object-cover pointer-events-none"
+                    aria-hidden="true"
+                  />
+                </div>
+              ) : null)}
             </div>
           </div>
         </div>

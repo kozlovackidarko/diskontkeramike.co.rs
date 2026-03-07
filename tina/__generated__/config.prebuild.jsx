@@ -12,7 +12,7 @@ var product_options_default = {
     { slug: "rasprodaja", name: "Rasprodaja" }
   ],
   classes: ["Prva klasa", "Druga klasa"],
-  colors: ["Bela", "Plava", "Siva", "Braon", "Be\u017E", "Crna"],
+  colors: ["Bela", "Plava", "Siva", "Braon", "Be\u017E", "Crna", "Crvena"],
   purposes: ["Spoljne", "Unutra\u0161nje", "Kupatilske", "Terasa", "Podne", "Zidne", "Bazen"],
   manufacturers: [
     "Crystal Ceramicas",

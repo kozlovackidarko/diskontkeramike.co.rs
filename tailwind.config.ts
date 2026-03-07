@@ -39,9 +39,19 @@ const config: Config = {
           '0%, 100%': { boxShadow: '0 0 28px 8px rgba(209, 113, 64, 0.4)' },
           '50%': { boxShadow: '0 0 44px 16px rgba(209, 113, 64, 0.65)' },
         },
+        'spin-slow': {
+          '0%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
+          '100%': { transform: 'translate(-50%, -50%) rotate(360deg)' },
+        },
+        'novo-pulse': {
+          '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
+          '50%': { opacity: '1', transform: 'scale(1.08)' },
+        },
       },
       animation: {
         'glow-pulse': 'glow-pulse 2.5s ease-in-out infinite',
+        'spin-slow': 'spin-slow 12s linear infinite',
+        'novo-pulse': 'novo-pulse 2s ease-in-out infinite',
       },
     },
   },

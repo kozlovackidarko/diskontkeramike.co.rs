@@ -1,5 +1,6 @@
 import Header from '@/components/Header/Header'
 import Hero from '@/components/Hero/Hero'
+import NewLocationAnnouncement from '@/components/NewLocationAnnouncement/NewLocationAnnouncement'
 import Divider from '@/components/Divider/Divider'
 import CollectionShowcase from '@/components/CollectionShowcase/CollectionShowcase'
 import ContactInfo from '@/components/ContactInfo/ContactInfo'
@@ -42,7 +43,7 @@ export default async function OnamaPage() {
     <>
       <Header />
       <main className="min-h-screen">
-        <Hero {...O_NAMA_HERO} />
+        <Hero {...O_NAMA_HERO} rightContent={<NewLocationAnnouncement />} />
         <CollectionShowcase collectionName="Naša preporuka" products={products} />
         <Divider />
         <ContactInfo bg="off-white" />
