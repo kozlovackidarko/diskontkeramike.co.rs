@@ -13,7 +13,7 @@ export default function NewLocationAnnouncement() {
       <div className="relative z-10 m-[3px] overflow-hidden bg-white rounded-[2px] min-h-0">
         <div className="bg-orange px-4 py-3 text-center">
           <p className="font-montserrat font-black text-white text-[24px] sm:text-[28px] tracking-wider uppercase animate-novo-pulse">
-            Novo! Novo! Novo!
+            Nova lokacija!!!
           </p>
         </div>
       <div className="relative w-full aspect-[16/10] min-h-[200px] bg-off-white">
@@ -31,7 +31,7 @@ export default function NewLocationAnnouncement() {
       </div>
       <div className="px-4 py-4 space-y-2">
         <p className="font-montserrat font-bold text-black text-lg">
-          Hajduk Veljkova bb
+          Hajduk Veljkova bb, Kraljevo
         </p>
         <p className="font-inter text-[15px] text-black">
           Magacin preko vrtica i firme Pub internacional
