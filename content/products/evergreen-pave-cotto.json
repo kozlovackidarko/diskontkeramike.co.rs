@@ -1,7 +1,11 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/evergreen pave cotto.jpg"
+    }
+  ],
   "name": "Evergreen pave cotto",
   "dimensions": {
     "width": 34,
