@@ -1,4 +1,6 @@
+import type { Metadata } from 'next'
 import Header from '@/components/Header/Header'
+import { PAGE_SEO } from '@/lib/seo'
 import Hero from '@/components/Hero/Hero'
 import NewLocationAnnouncement from '@/components/NewLocationAnnouncement/NewLocationAnnouncement'
 import Divider from '@/components/Divider/Divider'
@@ -25,6 +27,8 @@ async function getProducts(): Promise<Product[]> {
     return []
   }
 }
+
+export const metadata: Metadata = PAGE_SEO.about
 
 const O_NAMA_HERO = {
   title: 'O nama',

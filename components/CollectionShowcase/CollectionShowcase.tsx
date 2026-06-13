@@ -9,12 +9,19 @@ export interface CollectionShowcaseProps {
   products: Product[]
   /** When true, also include products that are on sale (even if not in the collection). */
   includeOnSale?: boolean
+  headingLevel?: 'h1' | 'h2'
 }
 
 const INITIAL_PAGE_SIZE = 50
 const LOAD_MORE_SIZE = 50
 
-export default function CollectionShowcase({ collectionName, products, includeOnSale = false }: CollectionShowcaseProps) {
+export default function CollectionShowcase({
+  collectionName,
+  products,
+  includeOnSale = false,
+  headingLevel = 'h2',
+}: CollectionShowcaseProps) {
+  const HeadingTag = headingLevel
   const [visibleCount, setVisibleCount] = useState(INITIAL_PAGE_SIZE)
 
   const collectionProducts = useMemo(
@@ -35,7 +42,7 @@ export default function CollectionShowcase({ collectionName, products, includeOn
     <section className="bg-white py-8 md:py-10">
       <div className="px-4 sm:px-8">
         <div className="max-w-[1280px] mx-auto">
-          <h2 className="font-montserrat font-bold text-black text-2xl sm:text-3xl md:text-4xl mb-6 md:mb-10">{collectionName}</h2>
+          <HeadingTag className="font-montserrat font-bold text-black text-2xl sm:text-3xl md:text-4xl mb-6 md:mb-10">{collectionName}</HeadingTag>
           <ProductGrid products={visibleProducts} columns={4} />
           {hasMore && (
             <div className="flex justify-center pt-6">

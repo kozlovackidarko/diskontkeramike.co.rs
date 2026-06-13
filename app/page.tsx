@@ -1,4 +1,7 @@
+import type { Metadata } from 'next'
 import Header from '@/components/Header/Header'
+import LocalBusinessJsonLd from '@/components/Seo/LocalBusinessJsonLd'
+import { PAGE_SEO } from '@/lib/seo'
 import Hero from '@/components/Hero/Hero'
 import NewLocationAnnouncement from '@/components/NewLocationAnnouncement/NewLocationAnnouncement'
 import Divider from '@/components/Divider/Divider'
@@ -27,6 +30,8 @@ async function getProducts(): Promise<Product[]> {
   }
 }
 
+export const metadata: Metadata = PAGE_SEO.home
+
 const HOME_HERO = {
   title: 'Diskont Keramike',
   subtitle: 'Veliki izbor kermačkih pločica po najboljim cenama.',
@@ -43,6 +48,7 @@ export default async function Home() {
   const products = await getProducts()
   return (
     <>
+      <LocalBusinessJsonLd />
       <Header />
       <main className="min-h-screen">
         <Hero {...HOME_HERO} rightContent={<NewLocationAnnouncement />} />

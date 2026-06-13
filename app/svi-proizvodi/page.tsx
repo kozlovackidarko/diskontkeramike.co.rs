@@ -1,4 +1,6 @@
+import type { Metadata } from 'next'
 import Header from '@/components/Header/Header'
+import { PAGE_SEO } from '@/lib/seo'
 import Divider from '@/components/Divider/Divider'
 import ProductsSection from '@/components/ProductsSection/ProductsSection'
 import ContactInfo from '@/components/ContactInfo/ContactInfo'
@@ -23,6 +25,8 @@ async function getProducts(): Promise<Product[]> {
     return []
   }
 }
+
+export const metadata: Metadata = PAGE_SEO.products
 
 export default async function SviProizvodiPage() {
   const products = await getProducts()

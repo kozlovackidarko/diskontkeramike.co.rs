@@ -1,4 +1,6 @@
+import type { Metadata } from 'next'
 import Header from '@/components/Header/Header'
+import { getCategoryMetadata } from '@/lib/seo'
 import Divider from '@/components/Divider/Divider'
 import CollectionShowcase from '@/components/CollectionShowcase/CollectionShowcase'
 import ContactInfo from '@/components/ContactInfo/ContactInfo'
@@ -30,6 +32,17 @@ export async function generateStaticParams() {
   return getCategorySlugs().map((slug) => ({ slug }))
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params
+  const category = getCategoryBySlug(slug)
+  if (!category) return {}
+  return getCategoryMetadata(slug, category.name)
+}
+
 export default async function CategoryPage({
   params,
 }: {
@@ -48,6 +61,7 @@ export default async function CategoryPage({
           collectionName={category.name}
           products={products}
           includeOnSale={includeOnSale}
+          headingLevel="h1"
         />
         <Divider />
         <ContactInfo bg="off-white" />

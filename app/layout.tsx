@@ -1,6 +1,12 @@
 import type { Metadata } from 'next'
 import { Inter, Montserrat } from 'next/font/google'
 import './globals.css'
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_OG_IMAGE,
+  SITE_NAME,
+  SITE_URL,
+} from '@/lib/seo'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -15,12 +21,13 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://diskontkeramike.co.rs'
-
 export const metadata: Metadata = {
-  title: 'Diskont Keramike',
-  description: 'A Next.js website for the Gille Promet d.o.o. company.',
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: DEFAULT_DESCRIPTION,
   icons: {
     icon: [
       { url: '/icons/favicon.ico', sizes: 'any' },
@@ -34,26 +41,24 @@ export const metadata: Metadata = {
     apple: [{ url: '/icons/icon-180.png', sizes: '180x180', type: 'image/png' }],
   },
   openGraph: {
-    title: 'Diskont Keramike',
-    description: 'A Next.js website for the Gille Promet d.o.o. company.',
-    url: siteUrl,
-    siteName: 'Diskont Keramike',
+    title: SITE_NAME,
+    description: DEFAULT_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
     images: [
       {
-        url: '/icons/icon-192.png',
-        width: 192,
-        height: 192,
-        alt: 'Diskont Keramike',
+        url: DEFAULT_OG_IMAGE,
+        alt: SITE_NAME,
       },
     ],
     locale: 'sr_RS',
     type: 'website',
   },
   twitter: {
-    card: 'summary',
-    title: 'Diskont Keramike',
-    description: 'A Next.js website for the Gille Promet d.o.o. company.',
-    images: ['/icons/icon-192.png'],
+    card: 'summary_large_image',
+    title: SITE_NAME,
+    description: DEFAULT_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE],
   },
 }
 
@@ -63,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="sr" className="scroll-smooth">
       <body className={`${inter.variable} ${montserrat.variable} font-inter`}>
         {children}
       </body>
