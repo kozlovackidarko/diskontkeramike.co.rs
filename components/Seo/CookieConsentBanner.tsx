@@ -2,28 +2,21 @@
 
 import { useEffect, useState } from 'react'
 import {
-  applyGoogleConsent,
-  getStoredConsent,
   saveConsent,
+  shouldShowConsentBanner,
+  type CookieConsentChoice,
 } from '@/lib/cookieConsent'
 
 export default function CookieConsentBanner() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    if (!getStoredConsent()) setVisible(true)
+    if (shouldShowConsentBanner()) setVisible(true)
   }, [])
 
-  function handleAccept() {
-    saveConsent('accepted')
-    applyGoogleConsent('accepted')
-    setVisible(false)
-  }
-
-  function handleDecline() {
-    saveConsent('declined')
-    applyGoogleConsent('declined')
-    setVisible(false)
+  function handleChoice(choice: CookieConsentChoice) {
+    saveConsent(choice)
+    window.location.reload()
   }
 
   if (!visible) return null
@@ -54,14 +47,14 @@ export default function CookieConsentBanner() {
         <div className="flex shrink-0 flex-col gap-2 xs:flex-row sm:gap-3">
           <button
             type="button"
-            onClick={handleDecline}
+            onClick={() => handleChoice('declined')}
             className="border border-black bg-white px-6 py-3 font-inter text-sm font-semibold text-black transition-colors hover:bg-off-white sm:text-base"
           >
             Odbij
           </button>
           <button
             type="button"
-            onClick={handleAccept}
+            onClick={() => handleChoice('accepted')}
             className="bg-blue px-6 py-3 font-inter text-sm font-semibold text-white transition-opacity hover:opacity-90 sm:text-base"
           >
             Prihvati

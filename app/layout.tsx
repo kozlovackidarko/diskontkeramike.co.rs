@@ -7,6 +7,7 @@ import {
   SITE_NAME,
   SITE_URL,
 } from '@/lib/seo'
+import GoogleConsentDefaults from '@/components/Seo/GoogleConsentDefaults'
 import GoogleAnalytics from '@/components/Seo/GoogleAnalytics'
 import CookieConsentBanner from '@/components/Seo/CookieConsentBanner'
 
@@ -72,6 +73,7 @@ export default function RootLayout({
   return (
     <html lang="sr" className="scroll-smooth">
       <body className={`${inter.variable} ${montserrat.variable} font-inter`}>
+        <GoogleConsentDefaults />
         <GoogleAnalytics />
         {children}
         <CookieConsentBanner />

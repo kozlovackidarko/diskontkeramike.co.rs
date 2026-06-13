@@ -154,7 +154,7 @@ export default function ContactForm() {
               disabled={status === 'sending' || !canSubmit}
               className="inline-block bg-blue text-white px-8 py-3 font-inter text-base font-semibold hover:opacity-90 transition-opacity w-fit disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              {status === 'sending' ? 'Šaljem...' : 'Pošalji poruku'}
+              {status === 'sending' ? 'Šalje se...' : 'Pošalji poruku'}
             </button>
           </form>
         </div>
