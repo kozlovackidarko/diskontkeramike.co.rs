@@ -1,7 +1,11 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/RUSTIC%20Nut%2020x120.jpg"
+    }
+  ],
   "name": "Rustic  Nut",
   "dimensions": {
     "width": 20,
