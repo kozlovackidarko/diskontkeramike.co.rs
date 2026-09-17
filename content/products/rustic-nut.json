@@ -1,0 +1,29 @@
+{
+  "active": true,
+  "type": "tile",
+  "pictures": [],
+  "name": "Rustic  Nut",
+  "dimensions": {
+    "width": 20,
+    "height": 120,
+    "thickness": 10
+  },
+  "tile_type": "Drvo",
+  "final_polish": "Mat",
+  "price": 1600,
+  "categories": [
+    "Naša preporuka"
+  ],
+  "onSale": false,
+  "class": "Prva klasa",
+  "color": [
+    "Braon"
+  ],
+  "purpose": [
+    "Spoljne",
+    "Unutrašnje",
+    "Terasa",
+    "Podne"
+  ],
+  "manufacturer": "Castelvetro"
+}
