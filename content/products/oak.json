@@ -1,7 +1,11 @@
 {
   "active": true,
   "type": "tile",
-  "pictures": [],
+  "pictures": [
+    {
+      "src": "/images/product-images/Woodland%20Oak%2020x120.jpg"
+    }
+  ],
   "name": "OAK",
   "dimensions": {
     "width": 20,
